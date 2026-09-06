@@ -615,4 +615,25 @@ body.has-float{padding-bottom:0}
 .zalo-fab:hover{transform:translateY(-3px)}
 @media (min-width:980px){.zalo-fab{display:grid}}
 .float-cta .btn-zalo{flex:0 0 auto;background:#0068FF;border-color:#0068FF;color:#fff}
+/* ---------- Chinese typography ---------- */
+:root[data-lang="zh"] body{font-family:"Noto Sans SC",var(--sans)}
+:root[data-lang="zh"] h1,:root[data-lang="zh"] h2,:root[data-lang="zh"] h3,:root[data-lang="zh"] .tagline,:root[data-lang="zh"] .stack,:root[data-lang="zh"] .quote,:root[data-lang="zh"] .q{font-family:"Noto Serif SC",var(--serif);letter-spacing:0}
+:root[data-lang="zh"] .hero h1{font-size:clamp(2.6rem,7vw,6rem);line-height:1.08;font-weight:600}
+:root[data-lang="zh"] .h2{font-weight:600}
+:root[data-lang="zh"] .vi{font-family:var(--sans);font-style:normal;font-size:.86rem;letter-spacing:.06em;text-transform:uppercase}
+/* ---------- real photos ---------- */
+.shot{cursor:zoom-in}
+.shot{background-size:cover;background-position:center;transition:transform .4s ease}
+.shot:hover{transform:scale(1.015)}
+.shot .cap{color:#fff;text-shadow:0 1px 8px rgba(0,0,0,.55)}
+.shot::after{content:"";position:absolute;inset:0;z-index:1;background:linear-gradient(180deg,transparent 55%,rgba(20,16,12,.55) 100%);pointer-events:none}
+.shot::before{display:none}
+.lightbox{position:fixed;inset:0;z-index:100;background:rgba(20,16,12,.92);display:grid;place-items:center;padding:2rem;opacity:0;transition:opacity .25s ease;cursor:zoom-out}
+.lightbox.on{opacity:1}
+.lightbox img{max-width:min(100%,1400px);max-height:100%;object-fit:contain;border-radius:4px;box-shadow:0 30px 80px rgba(0,0,0,.6)}
+.lightbox .close{position:absolute;top:1rem;right:1.2rem;color:#fff;font-size:2.2rem;line-height:1;width:44px;height:44px}
+.zalo-fab{position:fixed;right:1.1rem;bottom:1.1rem;z-index:47;width:56px;height:56px;border-radius:50%;background:#0068FF;color:#fff;display:none;place-items:center;font-weight:700;font-size:.8rem;letter-spacing:.02em;box-shadow:0 10px 24px -8px rgba(0,104,255,.6);transition:transform .25s ease}
+.zalo-fab:hover{transform:translateY(-3px)}
+@media (min-width:980px){.zalo-fab{display:grid}}
+.float-cta .btn-zalo{flex:0 0 auto;background:#0068FF;border-color:#0068FF;color:#fff}
 </style>
