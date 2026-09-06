@@ -9,9 +9,9 @@
 <style>
 /* ---------- tokens ---------- */
 :root{
-  --ivory:#F6F0E4;
-  --ivory-2:#EEE5D3;
-  --ivory-3:#E5DAC4;
+  --ivory:#FFFFFF;
+  --ivory-2:#F6F4EF;
+  --ivory-3:#ECE8DF;
   --ink:#2A2521;
   --ink-2:#5E554D;
   --ink-3:#8A8078;
@@ -19,10 +19,10 @@
   --line-strong:rgba(42,37,33,.32);
   --sun:#E4B342;
   --sun-soft:#F2DA9C;
-  --sun-wash:#F7E9C4;
+  --sun-wash:#FBF1D6;
   --moon:#9AAEC0;
   --moon-deep:#5B7186;
-  --moon-wash:#DCE3E9;
+  --moon-wash:#E6ECF1;
   --vermilion:#C4392A;
   --vermilion-ink:#FFF7F2;
   --shadow:0 18px 40px -22px rgba(42,37,33,.35);
@@ -321,10 +321,11 @@ p{margin:0}
 .extra .h3{margin-top:.8rem;font-size:clamp(1.8rem,3.2vw,2.6rem)}
 .extra-grid{display:grid;gap:1.25rem}
 @media (min-width:760px){.extra-grid{grid-template-columns:repeat(3,1fr)}}
-.xprog{position:relative;overflow:hidden;min-width:0;background:var(--ivory-2);border:1px solid transparent;border-radius:var(--radius);padding:1.8rem;display:flex;flex-direction:column;gap:1rem;transition:transform .35s ease,box-shadow .35s ease,border-color .35s ease}
+.xprog{position:relative;overflow:hidden;min-width:0;background:var(--ivory-2);border:1px solid var(--line);border-radius:var(--radius);padding:0 1.8rem 1.8rem;display:flex;flex-direction:column;gap:1rem;transition:transform .35s ease,box-shadow .35s ease,border-color .35s ease}
 .xprog:hover{transform:translateY(-6px);box-shadow:var(--shadow);border-color:var(--line)}
+.xshot{aspect-ratio:16/10;margin:0 -1.8rem 1.4rem;border-radius:var(--radius) var(--radius) 0 0}
 .xprog .glyph{position:absolute;right:-.1em;top:-.35em;font-family:var(--sc);font-size:7rem;line-height:1;color:var(--ink);opacity:.045;pointer-events:none}
-.xprog .top{display:flex;justify-content:flex-start}
+.xprog .top{display:flex;justify-content:flex-start;margin-top:-.4rem}
 .xprog .age{font-size:.7rem;letter-spacing:.18em;text-transform:uppercase;font-weight:600;padding:.45rem .7rem;border-radius:999px;border:1px solid var(--line-strong)}
 .xprog .name{font-size:clamp(1.5rem,2.2vw,1.9rem);line-height:1.05}
 .xprog .tagline{font-family:var(--serif);font-style:italic;font-weight:300;font-size:1.15rem;color:var(--ink)}
@@ -648,6 +649,9 @@ body.has-float{padding-bottom:0}
 .shot[data-photo="hero-main"]{background-image:url("assets/photos/hero-main.jpg")}
 .shot[data-photo="hero-small"]{background-image:url("assets/photos/hero-small.jpg")}
 .shot[data-photo="teachers"]{background-image:url("assets/photos/teachers.jpg")}
+.shot[data-photo="class-math"]{background-image:url("assets/photos/class-math.jpg")}
+.shot[data-photo="class-prep"]{background-image:url("assets/photos/class-prep.jpg")}
+.shot[data-photo="class-writing"]{background-image:url("assets/photos/class-writing.jpg")}
 .shot[data-photo="gallery-01"]{background-image:url("assets/photos/gallery-01.jpg")}
 .shot[data-photo="gallery-02"]{background-image:url("assets/photos/gallery-02.jpg")}
 .shot[data-photo="gallery-03"]{background-image:url("assets/photos/gallery-03.jpg")}
@@ -808,6 +812,7 @@ body.has-float{padding-bottom:0}
       </div>
       <div class="extra-grid">
       <article class="xprog reveal">
+        <figure class="ph shot xshot" data-photo="class-math" role="img" aria-label="Giờ Toán tư duy tại SunMoon"><span class="cap">Giờ Toán tư duy tại SunMoon</span></figure>
         <span class="glyph" aria-hidden="true">数</span>
         <div class="top"><span class="age">3–6 tuổi</span></div>
         <h3 class="name">Toán tư duy</h3>
@@ -817,6 +822,7 @@ body.has-float{padding-bottom:0}
         <a class="link" href="#trial">Đăng ký học thử <svg viewBox="0 0 16 16" fill="none" stroke="currentColor" stroke-width="1.5"><path d="M2 8h11M9 4l4 4-4 4"/></svg></a>
       </article>
       <article class="xprog reveal">
+        <figure class="ph shot xshot" data-photo="class-prep" role="img" aria-label="Chuẩn bị vào lớp 1"><span class="cap">Chuẩn bị vào lớp 1</span></figure>
         <span class="glyph" aria-hidden="true">学</span>
         <div class="top"><span class="age">5–6 tuổi</span></div>
         <h3 class="name">Tiền tiểu học</h3>
@@ -826,6 +832,7 @@ body.has-float{padding-bottom:0}
         <a class="link" href="#trial">Đăng ký học thử <svg viewBox="0 0 16 16" fill="none" stroke="currentColor" stroke-width="1.5"><path d="M2 8h11M9 4l4 4-4 4"/></svg></a>
       </article>
       <article class="xprog reveal">
+        <figure class="ph shot xshot" data-photo="class-writing" role="img" aria-label="Luyện từng nét chữ"><span class="cap">Luyện từng nét chữ</span></figure>
         <span class="glyph" aria-hidden="true">书</span>
         <div class="top"><span class="age">5–7 tuổi</span></div>
         <h3 class="name">Luyện chữ đẹp</h3>
@@ -1316,6 +1323,7 @@ body.has-float{padding-bottom:0}
       </div>
       <div class="extra-grid">
       <article class="xprog reveal">
+        <figure class="ph shot xshot" data-photo="class-math" role="img" aria-label="Giờ Toán tư duy tại SunMoon"><span class="cap">Giờ Toán tư duy tại SunMoon</span></figure>
         <span class="glyph" aria-hidden="true">数</span>
         <div class="top"><span class="age">3–6 tuổi</span></div>
         <h3 class="name">Toán tư duy</h3>
@@ -1325,6 +1333,7 @@ body.has-float{padding-bottom:0}
         <a class="link" href="#trial">Đăng ký học thử <svg viewBox="0 0 16 16" fill="none" stroke="currentColor" stroke-width="1.5"><path d="M2 8h11M9 4l4 4-4 4"/></svg></a>
       </article>
       <article class="xprog reveal">
+        <figure class="ph shot xshot" data-photo="class-prep" role="img" aria-label="Chuẩn bị vào lớp 1"><span class="cap">Chuẩn bị vào lớp 1</span></figure>
         <span class="glyph" aria-hidden="true">学</span>
         <div class="top"><span class="age">5–6 tuổi</span></div>
         <h3 class="name">Tiền tiểu học</h3>
@@ -1334,6 +1343,7 @@ body.has-float{padding-bottom:0}
         <a class="link" href="#trial">Đăng ký học thử <svg viewBox="0 0 16 16" fill="none" stroke="currentColor" stroke-width="1.5"><path d="M2 8h11M9 4l4 4-4 4"/></svg></a>
       </article>
       <article class="xprog reveal">
+        <figure class="ph shot xshot" data-photo="class-writing" role="img" aria-label="Luyện từng nét chữ"><span class="cap">Luyện từng nét chữ</span></figure>
         <span class="glyph" aria-hidden="true">书</span>
         <div class="top"><span class="age">5–7 tuổi</span></div>
         <h3 class="name">Luyện chữ đẹp</h3>
@@ -1828,6 +1838,7 @@ body.has-float{padding-bottom:0}
       </div>
       <div class="extra-grid">
       <article class="xprog reveal">
+        <figure class="ph shot xshot" data-photo="class-math" role="img" aria-label="A Logical Maths session"><span class="cap">A Logical Maths session</span></figure>
         <span class="glyph" aria-hidden="true">数</span>
         <div class="top"><span class="age">Ages 3–6</span></div>
         <h3 class="name">Logical Maths</h3>
@@ -1837,6 +1848,7 @@ body.has-float{padding-bottom:0}
         <a class="link" href="#trial">Book a trial <svg viewBox="0 0 16 16" fill="none" stroke="currentColor" stroke-width="1.5"><path d="M2 8h11M9 4l4 4-4 4"/></svg></a>
       </article>
       <article class="xprog reveal">
+        <figure class="ph shot xshot" data-photo="class-prep" role="img" aria-label="Getting ready for Grade 1"><span class="cap">Getting ready for Grade 1</span></figure>
         <span class="glyph" aria-hidden="true">学</span>
         <div class="top"><span class="age">Ages 5–6</span></div>
         <h3 class="name">Pre-Primary</h3>
@@ -1846,6 +1858,7 @@ body.has-float{padding-bottom:0}
         <a class="link" href="#trial">Book a trial <svg viewBox="0 0 16 16" fill="none" stroke="currentColor" stroke-width="1.5"><path d="M2 8h11M9 4l4 4-4 4"/></svg></a>
       </article>
       <article class="xprog reveal">
+        <figure class="ph shot xshot" data-photo="class-writing" role="img" aria-label="Practising every stroke"><span class="cap">Practising every stroke</span></figure>
         <span class="glyph" aria-hidden="true">书</span>
         <div class="top"><span class="age">Ages 5–7</span></div>
         <h3 class="name">Beautiful Handwriting</h3>
@@ -2336,6 +2349,7 @@ body.has-float{padding-bottom:0}
       </div>
       <div class="extra-grid">
       <article class="xprog reveal">
+        <figure class="ph shot xshot" data-photo="class-math" role="img" aria-label="思维数学课堂"><span class="cap">思维数学课堂</span></figure>
         <span class="glyph" aria-hidden="true">数</span>
         <div class="top"><span class="age">3–6 岁</span></div>
         <h3 class="name">逻辑思维数学</h3>
@@ -2345,6 +2359,7 @@ body.has-float{padding-bottom:0}
         <a class="link" href="#trial">预约试听 <svg viewBox="0 0 16 16" fill="none" stroke="currentColor" stroke-width="1.5"><path d="M2 8h11M9 4l4 4-4 4"/></svg></a>
       </article>
       <article class="xprog reveal">
+        <figure class="ph shot xshot" data-photo="class-prep" role="img" aria-label="为一年级做准备"><span class="cap">为一年级做准备</span></figure>
         <span class="glyph" aria-hidden="true">学</span>
         <div class="top"><span class="age">5–6 岁</span></div>
         <h3 class="name">幼小衔接</h3>
@@ -2354,6 +2369,7 @@ body.has-float{padding-bottom:0}
         <a class="link" href="#trial">预约试听 <svg viewBox="0 0 16 16" fill="none" stroke="currentColor" stroke-width="1.5"><path d="M2 8h11M9 4l4 4-4 4"/></svg></a>
       </article>
       <article class="xprog reveal">
+        <figure class="ph shot xshot" data-photo="class-writing" role="img" aria-label="一笔一画地练习"><span class="cap">一笔一画地练习</span></figure>
         <span class="glyph" aria-hidden="true">书</span>
         <div class="top"><span class="age">5–7 岁</span></div>
         <h3 class="name">书写练习</h3>
