@@ -207,6 +207,8 @@ p{margin:0}
 /* ---------- hero ---------- */
 .hero{padding-top:clamp(2rem,6vw,4.5rem);padding-bottom:clamp(3rem,7vw,5rem);position:relative;overflow:hidden}
 .hero .wrap{display:grid;gap:2.5rem;grid-template-columns:1fr}
+.hero .wrap>*{min-width:0}
+@media (min-width:600px){.nb{white-space:nowrap}}
 @media (min-width:900px){.hero .wrap{grid-template-columns:7fr 5fr;align-items:end;gap:3rem}}
 .hero-copy{position:relative}
 .hero .kicker{
