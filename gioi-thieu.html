@@ -572,22 +572,27 @@ p{margin:0}
 .form.sent .row,.form.sent .foot,.form.sent .field{display:none}
 
 /* ---------- footer ---------- */
-.footer{background:var(--ink);color:var(--ivory);padding-block:4rem 2rem}
-.footer .top{display:grid;gap:2.5rem;padding-bottom:3rem;border-bottom:1px solid color-mix(in srgb,var(--ivory) 14%,transparent)}
-@media (min-width:900px){.footer .top{grid-template-columns:5fr 3fr 4fr}}
-.footer .brand .mark{box-shadow:inset -8px -6px 0 0 var(--ink)}
-.footer .brand .word small{color:color-mix(in srgb,var(--ivory) 60%,transparent)}
-.footer .strap{margin-top:1.4rem;font-size:.72rem;letter-spacing:.18em;text-transform:uppercase;color:color-mix(in srgb,var(--ivory) 55%,transparent)}
-.footer .big{margin-top:2rem;font-family:var(--serif);font-size:clamp(1.4rem,2.4vw,1.9rem);font-weight:300;line-height:1.25;max-width:22ch}
-.footer .big .sc{display:block;color:var(--sun);font-size:.9rem;letter-spacing:.35em;margin-top:.8rem}
-.footer h4{font-family:var(--sans);font-size:.68rem;letter-spacing:.2em;text-transform:uppercase;color:color-mix(in srgb,var(--ivory) 55%,transparent);margin-bottom:1.2rem;font-weight:600}
-.footer ul{list-style:none;margin:0;padding:0;display:grid;gap:.6rem}
-.footer ul a{font-size:.98rem;color:color-mix(in srgb,var(--ivory) 85%,transparent);transition:color .2s}
-.footer ul a:hover{color:var(--sun)}
-.footer .contact-list li{display:grid;grid-template-columns:5.5rem minmax(0,1fr);overflow-wrap:anywhere;gap:.8rem;font-size:.95rem}
-.footer .contact-list span{font-size:.64rem;letter-spacing:.16em;text-transform:uppercase;color:color-mix(in srgb,var(--ivory) 50%,transparent);padding-top:.25rem;font-weight:600}
-.footer .contact-list em{font-family:var(--serif);color:color-mix(in srgb,var(--ivory) 55%,transparent)}
-.footer .bottom{display:flex;flex-wrap:wrap;justify-content:space-between;gap:.8rem;padding-top:1.6rem;font-size:.78rem;color:color-mix(in srgb,var(--ivory) 50%,transparent)}
+.footer{background:var(--ivory-2);color:var(--ink);padding-block:3.5rem 1.6rem;border-top:1px solid var(--line)}
+.footer .top{display:grid;gap:2.2rem 3rem;padding-bottom:2.4rem;border-bottom:1px solid var(--line)}
+@media (min-width:700px){.footer .top{grid-template-columns:1fr 1fr}}
+@media (min-width:980px){.footer .top{grid-template-columns:5fr 3fr 5fr}}
+.footer .brand-row{display:flex;align-items:center;gap:1rem}
+.footer .brand .word small{color:var(--ink-2)}
+.footer .strap{margin-top:1.4rem;font-size:.72rem;letter-spacing:.18em;text-transform:uppercase;color:var(--ink-3)}
+.footer .big{margin-top:1.6rem;font-family:var(--serif);font-size:clamp(1.4rem,2.4vw,1.9rem);font-weight:300;line-height:1.25;max-width:22ch}
+.footer .big .sc{display:block;color:var(--vermilion);font-size:.9rem;letter-spacing:.35em;margin-top:.8rem}
+.footer h4{font-family:var(--sans);font-size:.68rem;letter-spacing:.2em;text-transform:uppercase;color:var(--ink-3);margin-bottom:1.1rem;padding-bottom:.7rem;border-bottom:1px solid var(--line);font-weight:600}
+.footer ul{list-style:none;margin:0;padding:0;display:grid;gap:.55rem}
+.footer .explore ul{grid-template-columns:1fr 1fr;gap:.55rem 1.2rem}
+@media (min-width:980px){.footer .explore ul{grid-template-columns:1fr}}
+.footer ul a{font-size:.98rem;color:var(--ink);transition:color .2s}
+.footer ul a:hover{color:var(--vermilion)}
+.footer .contact-list{gap:1rem}
+.footer .contact-list li{display:block;font-size:.95rem;line-height:1.5;overflow-wrap:anywhere;color:var(--ink)}
+.footer .contact-list li span{display:block;font-size:.62rem;letter-spacing:.18em;text-transform:uppercase;color:var(--ink-3);font-weight:600;margin-bottom:.15rem}
+.footer .contact-list a{color:var(--ink)}
+.footer .contact-list a:hover{color:var(--vermilion)}
+.footer .bottom{display:flex;flex-wrap:wrap;justify-content:space-between;gap:.8rem;padding-top:1.6rem;font-size:.78rem;color:var(--ink-3)}
 .footer .bottom .sc{letter-spacing:.3em}
 
 /* ---------- floating cta (mobile) ---------- */
@@ -810,19 +815,17 @@ body.has-float{padding-bottom:0}
         <p class="strap">Tiếng Trung · Văn hoá · Sáng tạo · Trưởng thành</p>
         <p class="big">Tiếng Trung không chỉ là một ngôn ngữ. Đó là một cách để khám phá thế giới.<span class="sc">日月 · 世界</span></p>
       </div>
-      <div>
+      <div class="explore">
         <h4>Khám phá</h4>
         <ul><li><a href="index.html">Trang chủ</a></li><li><a href="lop-hoc.html">Các lớp học</a></li><li><a href="ba-me.html">Dành cho ba mẹ</a></li><li><a href="hoi-dap.html">Hỏi đáp</a></li><li><a href="lien-he.html">Liên hệ</a></li></ul>
       </div>
       <div>
         <h4>Liên hệ</h4>
         <ul class="contact-list">
-          <li><span>Điện thoại</span><a href="tel:+84396308188">039 630 8188</a></li>
-          <li><span>Zalo</span><a href="https://zalo.me/0396308188" target="_blank" rel="noopener">Zalo 039 630 8188</a></li>
+          <li><span>Điện thoại &amp; Zalo</span><a href="tel:+84396308188">039 630 8188</a> · <a href="https://zalo.me/0396308188" target="_blank" rel="noopener">Zalo</a></li>
           <li><span>Email</span><a href="mailto:sunmoonartandeducation@gmail.com">sunmoonartandeducation@gmail.com</a></li>
-          <li><span>Địa chỉ</span>Park 01 &amp; Landmark 6, Vinhomes Central Park, 208 Nguyễn Hữu Cảnh, Bình Thạnh, TP.HCM</li>
+          <li><span>Địa chỉ</span>Park 01 &amp; Landmark 6, Vinhomes Central Park,<br>208 Nguyễn Hữu Cảnh, Bình Thạnh, TP.HCM</li>
           <li><span>Facebook</span><a href="https://www.facebook.com/sunmoonartandeducation" target="_blank" rel="noopener">facebook.com/sunmoonartandeducation</a></li>
-          <li><span>Instagram</span><em>[INSTAGRAM]</em></li>
         </ul>
       </div>
     </div>
@@ -967,19 +970,17 @@ body.has-float{padding-bottom:0}
         <p class="strap">Tiếng Trung · Văn hoá · Sáng tạo · Trưởng thành</p>
         <p class="big">Tiếng Trung không chỉ là một ngôn ngữ. Đó là một cách để khám phá thế giới.<span class="sc">日月 · 世界</span></p>
       </div>
-      <div>
+      <div class="explore">
         <h4>Khám phá</h4>
         <ul><li><a href="index.html">Trang chủ</a></li><li><a href="lop-hoc.html">Các lớp học</a></li><li><a href="ba-me.html">Dành cho ba mẹ</a></li><li><a href="hoi-dap.html">Hỏi đáp</a></li><li><a href="lien-he.html">Liên hệ</a></li></ul>
       </div>
       <div>
         <h4>Liên hệ</h4>
         <ul class="contact-list">
-          <li><span>Điện thoại</span><a href="tel:+84396308188">039 630 8188</a></li>
-          <li><span>Zalo</span><a href="https://zalo.me/0396308188" target="_blank" rel="noopener">Zalo 039 630 8188</a></li>
+          <li><span>Điện thoại &amp; Zalo</span><a href="tel:+84396308188">039 630 8188</a> · <a href="https://zalo.me/0396308188" target="_blank" rel="noopener">Zalo</a></li>
           <li><span>Email</span><a href="mailto:sunmoonartandeducation@gmail.com">sunmoonartandeducation@gmail.com</a></li>
-          <li><span>Địa chỉ</span>Park 01 &amp; Landmark 6, Vinhomes Central Park, 208 Nguyễn Hữu Cảnh, Bình Thạnh, TP.HCM</li>
+          <li><span>Địa chỉ</span>Park 01 &amp; Landmark 6, Vinhomes Central Park,<br>208 Nguyễn Hữu Cảnh, Bình Thạnh, TP.HCM</li>
           <li><span>Facebook</span><a href="https://www.facebook.com/sunmoonartandeducation" target="_blank" rel="noopener">facebook.com/sunmoonartandeducation</a></li>
-          <li><span>Instagram</span><em>[INSTAGRAM]</em></li>
         </ul>
       </div>
     </div>
@@ -1124,19 +1125,17 @@ body.has-float{padding-bottom:0}
         <p class="strap">Chinese Language · Culture · Creativity · Growth</p>
         <p class="big">Chinese is more than a language. It is a way to discover the world.<span class="sc">日月 · 世界</span></p>
       </div>
-      <div>
+      <div class="explore">
         <h4>Explore</h4>
         <ul><li><a href="index.html">Home</a></li><li><a href="lop-hoc.html">Classes</a></li><li><a href="ba-me.html">For parents</a></li><li><a href="hoi-dap.html">FAQ</a></li><li><a href="lien-he.html">Contact</a></li></ul>
       </div>
       <div>
         <h4>Contact</h4>
         <ul class="contact-list">
-          <li><span>Phone</span><a href="tel:+84396308188">039 630 8188</a></li>
-          <li><span>Zalo</span><a href="https://zalo.me/0396308188" target="_blank" rel="noopener">Zalo 039 630 8188</a></li>
+          <li><span>Phone &amp; Zalo</span><a href="tel:+84396308188">039 630 8188</a> · <a href="https://zalo.me/0396308188" target="_blank" rel="noopener">Zalo</a></li>
           <li><span>Email</span><a href="mailto:sunmoonartandeducation@gmail.com">sunmoonartandeducation@gmail.com</a></li>
-          <li><span>Address</span>Park 01 &amp; Landmark 6, Vinhomes Central Park, 208 Nguyen Huu Canh, Binh Thanh District, Ho Chi Minh City</li>
+          <li><span>Address</span>Park 01 &amp; Landmark 6, Vinhomes Central Park,<br>208 Nguyen Huu Canh, Binh Thanh, Ho Chi Minh City</li>
           <li><span>Facebook</span><a href="https://www.facebook.com/sunmoonartandeducation" target="_blank" rel="noopener">facebook.com/sunmoonartandeducation</a></li>
-          <li><span>Instagram</span><em>[INSTAGRAM]</em></li>
         </ul>
       </div>
     </div>
@@ -1281,19 +1280,17 @@ body.has-float{padding-bottom:0}
         <p class="strap">中文语言 · 文化 · 创造力 · 成长</p>
         <p class="big">中文不只是一种语言，更是一种发现世界的方式。<span class="sc">日月 · 世界</span></p>
       </div>
-      <div>
+      <div class="explore">
         <h4>探索</h4>
         <ul><li><a href="index.html">首页</a></li><li><a href="lop-hoc.html">课程</a></li><li><a href="ba-me.html">家长须知</a></li><li><a href="hoi-dap.html">常见问题</a></li><li><a href="lien-he.html">联系我们</a></li></ul>
       </div>
       <div>
         <h4>联系方式</h4>
         <ul class="contact-list">
-          <li><span>电话</span><a href="tel:+84396308188">039 630 8188</a></li>
-          <li><span>Zalo</span><a href="https://zalo.me/0396308188" target="_blank" rel="noopener">Zalo 039 630 8188</a></li>
+          <li><span>电话 &amp; Zalo</span><a href="tel:+84396308188">039 630 8188</a> · <a href="https://zalo.me/0396308188" target="_blank" rel="noopener">Zalo</a></li>
           <li><span>邮箱</span><a href="mailto:sunmoonartandeducation@gmail.com">sunmoonartandeducation@gmail.com</a></li>
-          <li><span>地址</span>Park 01 &amp; Landmark 6, Vinhomes Central Park, 208 Nguyen Huu Canh, Binh Thanh, Ho Chi Minh City</li>
+          <li><span>地址</span>Park 01 &amp; Landmark 6, Vinhomes Central Park,<br>208 Nguyen Huu Canh, Binh Thanh, 胡志明市</li>
           <li><span>Facebook</span><a href="https://www.facebook.com/sunmoonartandeducation" target="_blank" rel="noopener">facebook.com/sunmoonartandeducation</a></li>
-          <li><span>Instagram</span><em>[INSTAGRAM]</em></li>
         </ul>
       </div>
     </div>
