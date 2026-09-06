@@ -62,7 +62,7 @@ extra_css = f'''
 .float-cta .btn-zalo{{flex:0 0 auto;background:#0068FF;border-color:#0068FF;color:#fff}}
 </style>'''
 photo_css = ''
-for name in ([photos.get('hero-main'), photos.get('hero-small')] + list(photos.get('gallery', []))):
+for name in ([v for k, v in photos.items() if k != 'gallery'] + list(photos.get('gallery', []))):
     if name: photo_css += f'.shot[data-photo="{name.rsplit(".",1)[0]}"]{{background-image:url("{photo_src(name)}")}}\n'
 extra_css = extra_css.replace('</style>', photo_css + '</style>')
 # drop the old logo/zalo css block that index.html carried, keep everything else

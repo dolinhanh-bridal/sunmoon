@@ -6,19 +6,17 @@
   var d=document, w=window;
   var reduce = w.matchMedia && w.matchMedia('(prefers-reduced-motion: reduce)').matches;
   var LANGS={vi:'Tiếng Việt',en:'English',zh:'中文'};
+  var ZALO='https://zalo.me/0396308188';
   var MSG={
-    en:{sending:'Sending…',btn:'Book a trial class',
-        ok:function(x){return '<b>Thank you, '+x.parent+'.</b>We have your request for a trial ('+x.group+'). We will contact you on '+x.phone+' to arrange a time.';},
-        no:function(x){return '<b>Almost there.</b>Our online form is not connected yet. Please send this to us on Zalo or by phone so we can arrange the trial: <br><br><em>'+x.parent+' · '+x.phone+' · '+x.group+(x.age?' · age '+x.age:'')+'</em>';},
-        open:'Open menu',close:'Close menu'},
-    vi:{sending:'Đang gửi…',btn:'Đăng ký học thử',
-        ok:function(x){return '<b>Cảm ơn '+x.parent+'.</b>SunMoon đã nhận yêu cầu học thử ('+x.group+'). Chúng tôi sẽ liên hệ số '+x.phone+' để hẹn giờ.';},
-        no:function(x){return '<b>Gần xong rồi.</b>Form online chưa được kết nối. Bạn gửi giúp thông tin này qua Zalo hoặc điện thoại để SunMoon hẹn buổi học thử: <br><br><em>'+x.parent+' · '+x.phone+' · '+x.group+(x.age?' · '+x.age+' tuổi':'')+'</em>';},
-        open:'Mở menu',close:'Đóng menu'},
-    zh:{sending:'发送中…',btn:'预约试听课',
-        ok:function(x){return '<b>谢谢您，'+x.parent+'。</b>我们已收到您的试听申请（'+x.group+'）。我们会通过 '+x.phone+' 联系您安排时间。';},
-        no:function(x){return '<b>就快好了。</b>在线表格尚未连接。请通过 Zalo 或电话把以下信息发给我们，以便安排试听：<br><br><em>'+x.parent+' · '+x.phone+' · '+x.group+(x.age?' · '+x.age+' 岁':'')+'</em>';},
-        open:'打开菜单',close:'关闭菜单'}
+    en:{open:'Open menu',close:'Close menu',title:'Your message is ready',copied:'Copied. Paste it into the Zalo chat.',copy:'Copy message',go:'Open Zalo and send',
+        hint:'Zalo will open a chat with SunMoon (039 630 8188). Paste the message and send it, we reply personally.',
+        compose:function(x){return 'Hello SunMoon, I would like to book a trial class.\n- Parent: '+x.parent+'\n- Phone/Zalo: '+x.phone+'\n- Class: '+x.group+(x.age?'\n- Age: '+x.age:'')+'\n- Chinese experience: '+x.experience+(x.message?'\n- Note: '+x.message:'');}},
+    vi:{open:'Mở menu',close:'Đóng menu',title:'Tin nhắn đã soạn sẵn',copied:'Đã sao chép. Dán vào khung chat Zalo là xong.',copy:'Sao chép tin nhắn',go:'Mở Zalo và gửi',
+        hint:'Zalo sẽ mở khung chat với SunMoon (039 630 8188). Dán tin nhắn và gửi, SunMoon sẽ trả lời trực tiếp.',
+        compose:function(x){return 'Xin chào SunMoon, tôi muốn đăng ký học thử.\n- Phụ huynh: '+x.parent+'\n- SĐT/Zalo: '+x.phone+'\n- Lớp: '+x.group+(x.age?'\n- Tuổi: '+x.age:'')+'\n- Đã học tiếng Trung: '+x.experience+(x.message?'\n- Ghi chú: '+x.message:'');}},
+    zh:{open:'打开菜单',close:'关闭菜单',title:'信息已为您准备好',copied:'已复制。粘贴到 Zalo 聊天框即可。',copy:'复制信息',go:'打开 Zalo 发送',
+        hint:'Zalo 将打开与日月（039 630 8188）的聊天窗口。粘贴信息并发送，我们会亲自回复。',
+        compose:function(x){return '您好日月，我想预约试听课。\n- 家长：'+x.parent+'\n- 电话/Zalo：'+x.phone+'\n- 班级：'+x.group+(x.age?'\n- 年龄：'+x.age:'')+'\n- 中文基础：'+x.experience+(x.message?'\n- 备注：'+x.message:'');}}
   };
   var lang='vi';
   function esc(s){ return String(s).replace(/[&<>"']/g,function(c){ return {'&':'&amp;','<':'&lt;','>':'&gt;','"':'&quot;',"'":'&#39;'}[c]; }); }
@@ -140,20 +138,19 @@
         f.classList.toggle('invalid', bad); if(bad) ok=false;
       });
       if(!ok){ form.querySelector('.invalid input').focus(); return; }
-      var data={}; new FormData(form).forEach(function(v,k){ data[k]=v; });
-      data.submitted_at=new Date().toISOString(); data.lang=lang;
-      var safe={}; for(var k in data) safe[k]=esc(data[k]);
-      var done=form.querySelector('.done'), btn=form.querySelector('button[type=submit]');
-      function finish(sent){
-        form.classList.add('sent');
-        done.innerHTML = sent ? MSG[lang].ok(safe) : MSG[lang].no(safe);
-        done.scrollIntoView({behavior: reduce?'auto':'smooth', block:'center'});
-      }
-      if(!FORM_ENDPOINT){ finish(false); return; }
-      btn.disabled=true; btn.textContent=MSG[lang].sending;
-      fetch(FORM_ENDPOINT,{method:'POST',mode:'no-cors',headers:{'Content-Type':'text/plain'},body:JSON.stringify(data)})
-        .then(function(){ finish(true); }).catch(function(){ finish(false); })
-        .finally(function(){ btn.disabled=false; btn.textContent=MSG[lang].btn; });
+      var data={}; new FormData(form).forEach(function(v,k){ data[k]=(v||'').trim(); });
+      var text=MSG[lang].compose(data);
+      var done=form.querySelector('.done');
+      form.classList.add('sent');
+      done.innerHTML='<b>'+MSG[lang].title+'</b><pre class="msg">'+esc(text)+'</pre><p class="hint-line">'+MSG[lang].hint+'</p>'
+        +'<div class="done-actions"><a class="btn btn-primary" target="_blank" rel="noopener" href="'+ZALO+'">'+MSG[lang].go+'</a><button type="button" class="btn btn-ghost copy">'+MSG[lang].copy+'</button></div><p class="copied" aria-live="polite"></p>';
+      var flag=done.querySelector('.copied');
+      function copy(){ try{ navigator.clipboard.writeText(text).then(function(){ flag.textContent=MSG[lang].copied; }); }catch(e){} }
+      done.querySelector('.copy').addEventListener('click', copy);
+      copy();
+      done.scrollIntoView({behavior: reduce?'auto':'smooth', block:'center'});
+      if(FORM_ENDPOINT){ data.submitted_at=new Date().toISOString(); data.lang=lang;
+        fetch(FORM_ENDPOINT,{method:'POST',mode:'no-cors',headers:{'Content-Type':'text/plain'},body:JSON.stringify(data)}).catch(function(){}); }
     });
     form.querySelectorAll('input').forEach(function(i){ i.addEventListener('input', function(){ i.closest('.field').classList.remove('invalid'); }); });
 

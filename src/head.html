@@ -435,6 +435,14 @@ p{margin:0}
 .tcard dd{margin:0;color:var(--ink-2)}
 .tcard .quote{font-family:var(--serif);font-style:italic;font-size:1.1rem;line-height:1.35;color:var(--ink);padding-left:1rem;border-left:2px solid var(--sun);margin-top:.4rem}
 
+.team{display:grid;gap:2.5rem}
+@media (min-width:900px){.team{grid-template-columns:5fr 7fr;gap:4rem;align-items:center}}
+.team-photo{aspect-ratio:4/3;margin:0}
+.team-copy{display:flex;flex-direction:column;gap:1.3rem}
+.team-copy .h2{margin-top:0}
+.team-copy .focus{display:flex;flex-wrap:wrap;gap:.4rem}
+.team-copy .focus span{font-size:.7rem;letter-spacing:.1em;text-transform:uppercase;padding:.4rem .65rem;border-radius:3px;background:var(--ivory-2);color:var(--ink-2);border:1px solid var(--line)}
+.team-quote{font-family:var(--serif);font-style:italic;font-size:1.25rem;line-height:1.35;padding-left:1rem;border-left:2px solid var(--sun)}
 /* ---------- stories ---------- */
 .stories{background:var(--ivory-2)}
 .stories .head{display:grid;gap:1.5rem;margin-bottom:3rem}
@@ -534,6 +542,10 @@ p{margin:0}
 .form .done{display:none;padding:1.4rem 1.6rem;border-left:2px solid var(--vermilion);background:var(--ivory);border-radius:0 var(--radius) var(--radius) 0;line-height:1.55}
 .form .done b{font-family:var(--serif);font-size:1.3rem;display:block;margin-bottom:.4rem;font-weight:500}
 .form.sent .done{display:block}
+.done .msg{white-space:pre-wrap;font:inherit;font-size:.95rem;background:var(--ivory-2);border:1px dashed var(--line-strong);border-radius:4px;padding:1rem;margin:.8rem 0;line-height:1.5}
+.done .hint-line{font-size:.9rem;color:var(--ink-2)}
+.done-actions{display:flex;flex-wrap:wrap;gap:.6rem;margin-top:1rem}
+.done .copied{font-size:.85rem;color:var(--vermilion);margin-top:.6rem;min-height:1.2em}
 .form.sent .row,.form.sent .foot,.form.sent .field{display:none}
 
 /* ---------- footer ---------- */

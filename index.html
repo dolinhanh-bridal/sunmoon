@@ -438,6 +438,14 @@ p{margin:0}
 .tcard dd{margin:0;color:var(--ink-2)}
 .tcard .quote{font-family:var(--serif);font-style:italic;font-size:1.1rem;line-height:1.35;color:var(--ink);padding-left:1rem;border-left:2px solid var(--sun);margin-top:.4rem}
 
+.team{display:grid;gap:2.5rem}
+@media (min-width:900px){.team{grid-template-columns:5fr 7fr;gap:4rem;align-items:center}}
+.team-photo{aspect-ratio:4/3;margin:0}
+.team-copy{display:flex;flex-direction:column;gap:1.3rem}
+.team-copy .h2{margin-top:0}
+.team-copy .focus{display:flex;flex-wrap:wrap;gap:.4rem}
+.team-copy .focus span{font-size:.7rem;letter-spacing:.1em;text-transform:uppercase;padding:.4rem .65rem;border-radius:3px;background:var(--ivory-2);color:var(--ink-2);border:1px solid var(--line)}
+.team-quote{font-family:var(--serif);font-style:italic;font-size:1.25rem;line-height:1.35;padding-left:1rem;border-left:2px solid var(--sun)}
 /* ---------- stories ---------- */
 .stories{background:var(--ivory-2)}
 .stories .head{display:grid;gap:1.5rem;margin-bottom:3rem}
@@ -537,6 +545,10 @@ p{margin:0}
 .form .done{display:none;padding:1.4rem 1.6rem;border-left:2px solid var(--vermilion);background:var(--ivory);border-radius:0 var(--radius) var(--radius) 0;line-height:1.55}
 .form .done b{font-family:var(--serif);font-size:1.3rem;display:block;margin-bottom:.4rem;font-weight:500}
 .form.sent .done{display:block}
+.done .msg{white-space:pre-wrap;font:inherit;font-size:.95rem;background:var(--ivory-2);border:1px dashed var(--line-strong);border-radius:4px;padding:1rem;margin:.8rem 0;line-height:1.5}
+.done .hint-line{font-size:.9rem;color:var(--ink-2)}
+.done-actions{display:flex;flex-wrap:wrap;gap:.6rem;margin-top:1rem}
+.done .copied{font-size:.85rem;color:var(--vermilion);margin-top:.6rem;min-height:1.2em}
 .form.sent .row,.form.sent .foot,.form.sent .field{display:none}
 
 /* ---------- footer ---------- */
@@ -616,6 +628,7 @@ body.has-float{padding-bottom:0}
 .float-cta .btn-zalo{flex:0 0 auto;background:#0068FF;border-color:#0068FF;color:#fff}
 .shot[data-photo="hero-main"]{background-image:url("assets/photos/hero-main.jpg")}
 .shot[data-photo="hero-small"]{background-image:url("assets/photos/hero-small.jpg")}
+.shot[data-photo="teachers"]{background-image:url("assets/photos/teachers.jpg")}
 .shot[data-photo="gallery-01"]{background-image:url("assets/photos/gallery-01.jpg")}
 .shot[data-photo="gallery-02"]{background-image:url("assets/photos/gallery-02.jpg")}
 .shot[data-photo="gallery-03"]{background-image:url("assets/photos/gallery-03.jpg")}
@@ -718,7 +731,7 @@ body.has-float{padding-bottom:0}
         <div class="top"><span class="num">Chương trình 01</span><span class="age">3–5 tuổi</span></div>
         <h3 class="name"><small>Little SunMoon</small>SunMoon Little</h3>
         <p class="tagline"><span>Những từ đầu tiên.</span><span>Những câu nói đầu tiên.</span><span>Tình yêu đầu tiên với tiếng Trung.</span></p>
-        <p class="vi">Dành cho trẻ mới bắt đầu làm quen với tiếng Trung.</p>
+        <p class="vi">Dành cho trẻ mới bắt đầu làm quen với tiếng Trung. Lớp nhỏ, tối đa 6 bé.</p>
         <div class="focus"><span>Nghe</span><span>Nói</span><span>Phát âm</span><span>Từ vựng</span><span>Kể chuyện</span><span>Âm nhạc &amp; vận động</span><span>Hoạt động sáng tạo</span></div>
         <p class="copy">Ở tuổi này, con không cần "học chăm hơn". <strong>Con cần được trải nghiệm ngôn ngữ một cách tự nhiên.</strong> Qua truyện kể, bài hát, vận động, trò chơi và hoạt động sáng tạo, tiếng Trung trở thành thứ con thích, không phải thứ con phải học thuộc.</p>
         <a class="link" href="#trial">Tìm hiểu Little <svg viewBox="0 0 16 16" fill="none" stroke="currentColor" stroke-width="1.5"><path d="M2 8h11M9 4l4 4-4 4"/></svg></a>
@@ -729,7 +742,7 @@ body.has-float{padding-bottom:0}
         <div class="top"><span class="num">Chương trình 02</span><span class="age">5–13 tuổi</span></div>
         <h3 class="name"><small>SunMoon Kids</small>SunMoon Kids</h3>
         <p class="tagline"><span>Xây nền tảng.</span><span>Tìm thấy giọng nói của mình.</span></p>
-        <p class="vi">Dành cho trẻ đã bắt đầu có nền tảng hoặc đang muốn học tiếng Trung bài bản hơn.</p>
+        <p class="vi">Dành cho trẻ đã bắt đầu có nền tảng hoặc đang muốn học tiếng Trung bài bản hơn. Lớp nhỏ, tối đa 6 bé.</p>
         <div class="focus"><span>Nghe</span><span>Nói</span><span>Đọc</span><span>Viết</span><span>Từ vựng</span><span>Ngữ pháp</span><span>Giao tiếp</span><span>Văn hoá Trung Hoa</span></div>
         <p class="copy">Khi con lớn lên, mối quan hệ của con với ngôn ngữ cũng thay đổi. Chương trình Kids đi dần từ giao tiếp vui chơi sang <strong>nền tảng ngôn ngữ vững hơn</strong>, giúp con tự tin hơn ở cả nghe, nói, đọc và viết.</p>
         <a class="link" href="#trial">Tìm hiểu Kids <svg viewBox="0 0 16 16" fill="none" stroke="currentColor" stroke-width="1.5"><path d="M2 8h11M9 4l4 4-4 4"/></svg></a>
@@ -896,33 +909,14 @@ body.has-float{padding-bottom:0}
 
 <!-- ============ TEACHERS ============ -->
 <section class="section teachers" id="teachers">
-  <div class="wrap">
-    <div class="head reveal">
-      <div>
-        <p class="eyebrow"><span class="sc">老师</span> Giáo viên</p>
-        <h2 class="h2">Những người đứng sau việc học</h2>
-      </div>
-      <a class="btn btn-ghost" href="#contact">Gặp giáo viên</a>
-    </div>
-    <div class="tgrid">
-      <article class="tcard reveal">
-        <div class="ph"><span class="frame"></span><span class="tag">[Ảnh giáo viên]</span><span class="glyph" aria-hidden="true">师</span></div>
-        <h3 class="name">[Tên giáo viên]</h3>
-        <dl><dt>Dạy</dt><dd>[Trọng tâm giảng dạy, vd. Little &amp; Kids]</dd><dt>Ngôn ngữ</dt><dd>[Ngôn ngữ]</dd></dl>
-        <p class="quote">“Trẻ học tốt nhất khi các con thấy đủ an toàn để mắc lỗi.”</p>
-      </article>
-      <article class="tcard reveal">
-        <div class="ph"><span class="tag">[Ảnh giáo viên]</span><span class="glyph" aria-hidden="true">教</span></div>
-        <h3 class="name">[Tên giáo viên]</h3>
-        <dl><dt>Dạy</dt><dd>[Trọng tâm giảng dạy, vd. Lộ trình HSK]</dd><dt>Ngôn ngữ</dt><dd>[Ngôn ngữ]</dd></dl>
-        <p class="quote">[Một câu nói riêng của giáo viên]</p>
-      </article>
-      <article class="tcard reveal">
-        <div class="ph"><span class="frame"></span><span class="tag">[Ảnh giáo viên]</span><span class="glyph" aria-hidden="true">学</span></div>
-        <h3 class="name">[Tên giáo viên]</h3>
-        <dl><dt>Dạy</dt><dd>[Trọng tâm giảng dạy, vd. Tiếng Trung thương mại]</dd><dt>Ngôn ngữ</dt><dd>[Ngôn ngữ]</dd></dl>
-        <p class="quote">[Một câu nói riêng của giáo viên]</p>
-      </article>
+  <div class="wrap team">
+    <figure class="ph shot team-photo reveal" data-photo="teachers" role="img" aria-label="Thầy cô và các bé trong ngày Nhà giáo"><span class="cap">Thầy cô và các bé trong ngày Nhà giáo</span></figure>
+    <div class="team-copy reveal">
+      <p class="eyebrow"><span class="sc">老师</span> Đội ngũ giáo viên</p>
+      <h2 class="h2">Những người đứng sau việc học</h2>
+      <p class="lede">Đội ngũ SunMoon gồm thầy cô người bản xứ và giáo viên Việt Nam tốt nghiệp chuyên ngành tiếng Trung, nhiều thầy cô từng du học tại Trung Quốc và có kinh nghiệm phiên dịch. Nhưng điều chúng tôi coi trọng hơn bằng cấp là cách thầy cô ở bên con: kiên nhẫn, ấm áp, và biết biến giờ học thành giờ chơi.</p>
+      <div class="focus"><span>Giáo viên bản xứ &amp; Việt Nam</span><span>Từng du học Trung Quốc</span><span>Kinh nghiệm phiên dịch</span><span>Lớp tối đa 6 bé</span></div>
+      <p class="team-quote">“Trẻ học tốt nhất khi các con thấy đủ an toàn để mắc lỗi.”</p>
     </div>
   </div>
 </section>
@@ -998,7 +992,7 @@ body.has-float{padding-bottom:0}
       <details><summary>Có luyện thi HSK không?<span class="ic"></span></summary><div class="ans"><p>Có. Lộ trình HSK của SunMoon đi từ nền tảng đến HSK 6.</p></div></details>
       <details><summary>Người lớn có học được không?<span class="ic"></span></summary><div class="ans"><p>Có. Chương trình người lớn được cá nhân hoá theo mục tiêu của từng học viên.</p></div></details>
       <details><summary>Có tiếng Trung thương mại không?<span class="ic"></span></summary><div class="ans"><p>Có.</p></div></details>
-      <details><summary>Một lớp có bao nhiêu học viên?<span class="ic"></span></summary><div class="ans"><p><span class="tbd">[Sĩ số lớp]</span></p><p>Điền sĩ số thật của lớp Little, Kids và HSK vào đây.</p></div></details>
+      <details><summary>Một lớp có bao nhiêu học viên?<span class="ic"></span></summary><div class="ans"><p>Tối đa 6 bé một lớp, để thầy cô kịp để ý tới từng con.</p></div></details>
       <details><summary>Lớp học ở đâu?<span class="ic"></span></summary><div class="ans"><p>Park 01 &amp; Landmark 6, Vinhomes Central Park, 208 Nguyễn Hữu Cảnh, Bình Thạnh, TP.HCM.</p><p><span class="tbd">[Có lớp online không?]</span></p></div></details>
       <details><summary>Đăng ký học thử thế nào?<span class="ic"></span></summary><div class="ans"><p>Điền form ngắn bên dưới, hoặc nhắn Zalo cho SunMoon. Chúng tôi sẽ liên hệ để hẹn giờ.</p><p><a class="link" href="#trial">Đăng ký học thử <svg viewBox="0 0 16 16" fill="none" stroke="currentColor" stroke-width="1.5"><path d="M2 8h11M9 4l4 4-4 4"/></svg></a></p></div></details>
     </div>
@@ -1033,7 +1027,6 @@ body.has-float{padding-bottom:0}
         <div><dt>Zalo / WhatsApp</dt><dd><a href="https://zalo.me/0396308188" target="_blank" rel="noopener">Zalo 039 630 8188</a></dd></div>
         <div><dt>Email</dt><dd><a href="mailto:sunmoonartandeducation@gmail.com">sunmoonartandeducation@gmail.com</a></dd></div>
         <div><dt>Địa chỉ</dt><dd>Park 01 &amp; Landmark 6, Vinhomes Central Park, 208 Nguyễn Hữu Cảnh, Bình Thạnh, TP.HCM</dd></div>
-        <div><dt>Giờ mở cửa</dt><dd class="ph-text">[GIỜ MỞ CỬA]</dd></div>
       </dl>
     </div>
     <form class="form reveal" id="trial" novalidate>
@@ -1063,7 +1056,7 @@ body.has-float{padding-bottom:0}
       </div>
       <div class="field"><label for="f-msg">Bạn muốn SunMoon biết thêm điều gì?</label><textarea id="f-msg" name="message" placeholder="Mục tiêu, ngày rảnh, câu hỏi…"></textarea></div>
       <div class="foot">
-        <p class="fine">SunMoon trả lời trực tiếp, thường trong một ngày làm việc. Chúng tôi không bàn học phí trước khi hiểu người học.</p>
+        <p class="fine">Bấm gửi, tin nhắn sẽ được soạn sẵn và Zalo của SunMoon (039 630 8188) sẽ mở ra. SunMoon trả lời trực tiếp, thường trong một ngày làm việc.</p>
         <button class="btn btn-primary" type="submit">Đăng ký học thử</button>
       </div>
       <div class="done" role="status" aria-live="polite"></div>
@@ -1206,7 +1199,7 @@ body.has-float{padding-bottom:0}
         <div class="top"><span class="num">Chương trình 01</span><span class="age">3–5 tuổi</span></div>
         <h3 class="name"><small>Little SunMoon</small>SunMoon Little</h3>
         <p class="tagline"><span>Những từ đầu tiên.</span><span>Những câu nói đầu tiên.</span><span>Tình yêu đầu tiên với tiếng Trung.</span></p>
-        <p class="vi">Dành cho trẻ mới bắt đầu làm quen với tiếng Trung.</p>
+        <p class="vi">Dành cho trẻ mới bắt đầu làm quen với tiếng Trung. Lớp nhỏ, tối đa 6 bé.</p>
         <div class="focus"><span>Nghe</span><span>Nói</span><span>Phát âm</span><span>Từ vựng</span><span>Kể chuyện</span><span>Âm nhạc &amp; vận động</span><span>Hoạt động sáng tạo</span></div>
         <p class="copy">Ở tuổi này, con không cần "học chăm hơn". <strong>Con cần được trải nghiệm ngôn ngữ một cách tự nhiên.</strong> Qua truyện kể, bài hát, vận động, trò chơi và hoạt động sáng tạo, tiếng Trung trở thành thứ con thích, không phải thứ con phải học thuộc.</p>
         <a class="link" href="#trial">Tìm hiểu Little <svg viewBox="0 0 16 16" fill="none" stroke="currentColor" stroke-width="1.5"><path d="M2 8h11M9 4l4 4-4 4"/></svg></a>
@@ -1217,7 +1210,7 @@ body.has-float{padding-bottom:0}
         <div class="top"><span class="num">Chương trình 02</span><span class="age">5–13 tuổi</span></div>
         <h3 class="name"><small>SunMoon Kids</small>SunMoon Kids</h3>
         <p class="tagline"><span>Xây nền tảng.</span><span>Tìm thấy giọng nói của mình.</span></p>
-        <p class="vi">Dành cho trẻ đã bắt đầu có nền tảng hoặc đang muốn học tiếng Trung bài bản hơn.</p>
+        <p class="vi">Dành cho trẻ đã bắt đầu có nền tảng hoặc đang muốn học tiếng Trung bài bản hơn. Lớp nhỏ, tối đa 6 bé.</p>
         <div class="focus"><span>Nghe</span><span>Nói</span><span>Đọc</span><span>Viết</span><span>Từ vựng</span><span>Ngữ pháp</span><span>Giao tiếp</span><span>Văn hoá Trung Hoa</span></div>
         <p class="copy">Khi con lớn lên, mối quan hệ của con với ngôn ngữ cũng thay đổi. Chương trình Kids đi dần từ giao tiếp vui chơi sang <strong>nền tảng ngôn ngữ vững hơn</strong>, giúp con tự tin hơn ở cả nghe, nói, đọc và viết.</p>
         <a class="link" href="#trial">Tìm hiểu Kids <svg viewBox="0 0 16 16" fill="none" stroke="currentColor" stroke-width="1.5"><path d="M2 8h11M9 4l4 4-4 4"/></svg></a>
@@ -1384,33 +1377,14 @@ body.has-float{padding-bottom:0}
 
 <!-- ============ TEACHERS ============ -->
 <section class="section teachers" id="teachers">
-  <div class="wrap">
-    <div class="head reveal">
-      <div>
-        <p class="eyebrow"><span class="sc">老师</span> Giáo viên</p>
-        <h2 class="h2">Những người đứng sau việc học</h2>
-      </div>
-      <a class="btn btn-ghost" href="#contact">Gặp giáo viên</a>
-    </div>
-    <div class="tgrid">
-      <article class="tcard reveal">
-        <div class="ph"><span class="frame"></span><span class="tag">[Ảnh giáo viên]</span><span class="glyph" aria-hidden="true">师</span></div>
-        <h3 class="name">[Tên giáo viên]</h3>
-        <dl><dt>Dạy</dt><dd>[Trọng tâm giảng dạy, vd. Little &amp; Kids]</dd><dt>Ngôn ngữ</dt><dd>[Ngôn ngữ]</dd></dl>
-        <p class="quote">“Trẻ học tốt nhất khi các con thấy đủ an toàn để mắc lỗi.”</p>
-      </article>
-      <article class="tcard reveal">
-        <div class="ph"><span class="tag">[Ảnh giáo viên]</span><span class="glyph" aria-hidden="true">教</span></div>
-        <h3 class="name">[Tên giáo viên]</h3>
-        <dl><dt>Dạy</dt><dd>[Trọng tâm giảng dạy, vd. Lộ trình HSK]</dd><dt>Ngôn ngữ</dt><dd>[Ngôn ngữ]</dd></dl>
-        <p class="quote">[Một câu nói riêng của giáo viên]</p>
-      </article>
-      <article class="tcard reveal">
-        <div class="ph"><span class="frame"></span><span class="tag">[Ảnh giáo viên]</span><span class="glyph" aria-hidden="true">学</span></div>
-        <h3 class="name">[Tên giáo viên]</h3>
-        <dl><dt>Dạy</dt><dd>[Trọng tâm giảng dạy, vd. Tiếng Trung thương mại]</dd><dt>Ngôn ngữ</dt><dd>[Ngôn ngữ]</dd></dl>
-        <p class="quote">[Một câu nói riêng của giáo viên]</p>
-      </article>
+  <div class="wrap team">
+    <figure class="ph shot team-photo reveal" data-photo="teachers" role="img" aria-label="Thầy cô và các bé trong ngày Nhà giáo"><span class="cap">Thầy cô và các bé trong ngày Nhà giáo</span></figure>
+    <div class="team-copy reveal">
+      <p class="eyebrow"><span class="sc">老师</span> Đội ngũ giáo viên</p>
+      <h2 class="h2">Những người đứng sau việc học</h2>
+      <p class="lede">Đội ngũ SunMoon gồm thầy cô người bản xứ và giáo viên Việt Nam tốt nghiệp chuyên ngành tiếng Trung, nhiều thầy cô từng du học tại Trung Quốc và có kinh nghiệm phiên dịch. Nhưng điều chúng tôi coi trọng hơn bằng cấp là cách thầy cô ở bên con: kiên nhẫn, ấm áp, và biết biến giờ học thành giờ chơi.</p>
+      <div class="focus"><span>Giáo viên bản xứ &amp; Việt Nam</span><span>Từng du học Trung Quốc</span><span>Kinh nghiệm phiên dịch</span><span>Lớp tối đa 6 bé</span></div>
+      <p class="team-quote">“Trẻ học tốt nhất khi các con thấy đủ an toàn để mắc lỗi.”</p>
     </div>
   </div>
 </section>
@@ -1486,7 +1460,7 @@ body.has-float{padding-bottom:0}
       <details><summary>Có luyện thi HSK không?<span class="ic"></span></summary><div class="ans"><p>Có. Lộ trình HSK của SunMoon đi từ nền tảng đến HSK 6.</p></div></details>
       <details><summary>Người lớn có học được không?<span class="ic"></span></summary><div class="ans"><p>Có. Chương trình người lớn được cá nhân hoá theo mục tiêu của từng học viên.</p></div></details>
       <details><summary>Có tiếng Trung thương mại không?<span class="ic"></span></summary><div class="ans"><p>Có.</p></div></details>
-      <details><summary>Một lớp có bao nhiêu học viên?<span class="ic"></span></summary><div class="ans"><p><span class="tbd">[Sĩ số lớp]</span></p><p>Điền sĩ số thật của lớp Little, Kids và HSK vào đây.</p></div></details>
+      <details><summary>Một lớp có bao nhiêu học viên?<span class="ic"></span></summary><div class="ans"><p>Tối đa 6 bé một lớp, để thầy cô kịp để ý tới từng con.</p></div></details>
       <details><summary>Lớp học ở đâu?<span class="ic"></span></summary><div class="ans"><p>Park 01 &amp; Landmark 6, Vinhomes Central Park, 208 Nguyễn Hữu Cảnh, Bình Thạnh, TP.HCM.</p><p><span class="tbd">[Có lớp online không?]</span></p></div></details>
       <details><summary>Đăng ký học thử thế nào?<span class="ic"></span></summary><div class="ans"><p>Điền form ngắn bên dưới, hoặc nhắn Zalo cho SunMoon. Chúng tôi sẽ liên hệ để hẹn giờ.</p><p><a class="link" href="#trial">Đăng ký học thử <svg viewBox="0 0 16 16" fill="none" stroke="currentColor" stroke-width="1.5"><path d="M2 8h11M9 4l4 4-4 4"/></svg></a></p></div></details>
     </div>
@@ -1521,7 +1495,6 @@ body.has-float{padding-bottom:0}
         <div><dt>Zalo / WhatsApp</dt><dd><a href="https://zalo.me/0396308188" target="_blank" rel="noopener">Zalo 039 630 8188</a></dd></div>
         <div><dt>Email</dt><dd><a href="mailto:sunmoonartandeducation@gmail.com">sunmoonartandeducation@gmail.com</a></dd></div>
         <div><dt>Địa chỉ</dt><dd>Park 01 &amp; Landmark 6, Vinhomes Central Park, 208 Nguyễn Hữu Cảnh, Bình Thạnh, TP.HCM</dd></div>
-        <div><dt>Giờ mở cửa</dt><dd class="ph-text">[GIỜ MỞ CỬA]</dd></div>
       </dl>
     </div>
     <form class="form reveal" id="trial" novalidate>
@@ -1551,7 +1524,7 @@ body.has-float{padding-bottom:0}
       </div>
       <div class="field"><label for="f-msg">Bạn muốn SunMoon biết thêm điều gì?</label><textarea id="f-msg" name="message" placeholder="Mục tiêu, ngày rảnh, câu hỏi…"></textarea></div>
       <div class="foot">
-        <p class="fine">SunMoon trả lời trực tiếp, thường trong một ngày làm việc. Chúng tôi không bàn học phí trước khi hiểu người học.</p>
+        <p class="fine">Bấm gửi, tin nhắn sẽ được soạn sẵn và Zalo của SunMoon (039 630 8188) sẽ mở ra. SunMoon trả lời trực tiếp, thường trong một ngày làm việc.</p>
         <button class="btn btn-primary" type="submit">Đăng ký học thử</button>
       </div>
       <div class="done" role="status" aria-live="polite"></div>
@@ -1695,7 +1668,7 @@ body.has-float{padding-bottom:0}
         <div class="top"><span class="num">Program 01</span><span class="age">Ages 3–5</span></div>
         <h3 class="name"><small>Little SunMoon</small>SunMoon Little</h3>
         <p class="tagline"><span>First words.</span><span>First conversations.</span><span>First love for Chinese.</span></p>
-        <p class="vi">Dành cho trẻ mới bắt đầu làm quen với tiếng Trung.</p>
+        <p class="vi">Dành cho trẻ mới bắt đầu làm quen với tiếng Trung. Small classes, at most 6 children.</p>
         <div class="focus"><span>Listening</span><span>Speaking</span><span>Pronunciation</span><span>Vocabulary</span><span>Storytelling</span><span>Music &amp; Movement</span><span>Creative Activities</span></div>
         <p class="copy">At this age, children don't need to "study harder". <strong>They need to experience language naturally.</strong> Through stories, songs, movement, games and creative activities, Mandarin becomes something they enjoy, not something they have to memorise.</p>
         <a class="link" href="#trial">Discover Little <svg viewBox="0 0 16 16" fill="none" stroke="currentColor" stroke-width="1.5"><path d="M2 8h11M9 4l4 4-4 4"/></svg></a>
@@ -1707,7 +1680,7 @@ body.has-float{padding-bottom:0}
         <div class="top"><span class="num">Program 02</span><span class="age">Ages 5–13</span></div>
         <h3 class="name"><small>SunMoon Kids</small>SunMoon Kids</h3>
         <p class="tagline"><span>Build the foundation.</span><span>Find their voice.</span></p>
-        <p class="vi">Dành cho trẻ đã bắt đầu có nền tảng hoặc đang muốn học tiếng Trung bài bản hơn.</p>
+        <p class="vi">Dành cho trẻ đã bắt đầu có nền tảng hoặc đang muốn học tiếng Trung bài bản hơn. Small classes, at most 6 children.</p>
         <div class="focus"><span>Listening</span><span>Speaking</span><span>Reading</span><span>Writing</span><span>Vocabulary</span><span>Grammar</span><span>Communication</span><span>Chinese Culture</span></div>
         <p class="copy">As children grow, their relationship with language changes. Our Kids programme gradually moves from playful communication to <strong>stronger language foundations</strong>, helping students become more confident in listening, speaking, reading and writing.</p>
         <a class="link" href="#trial">Discover Kids <svg viewBox="0 0 16 16" fill="none" stroke="currentColor" stroke-width="1.5"><path d="M2 8h11M9 4l4 4-4 4"/></svg></a>
@@ -1876,33 +1849,14 @@ body.has-float{padding-bottom:0}
 
 <!-- ============ TEACHERS ============ -->
 <section class="section teachers" id="teachers">
-  <div class="wrap">
-    <div class="head reveal">
-      <div>
-        <p class="eyebrow"><span class="sc">老师</span> Teachers</p>
-        <h2 class="h2">Meet the people behind the learning</h2>
-      </div>
-      <a class="btn btn-ghost" href="#contact">Meet our teachers</a>
-    </div>
-    <div class="tgrid">
-      <article class="tcard reveal">
-        <div class="ph"><span class="frame"></span><span class="tag">[Teacher photo]</span><span class="glyph" aria-hidden="true">师</span></div>
-        <h3 class="name">[Teacher name]</h3>
-        <dl><dt>Focus</dt><dd>[Teaching focus, e.g. Little &amp; Kids]</dd><dt>Languages</dt><dd>[Languages]</dd></dl>
-        <p class="quote">“Children learn best when they feel safe enough to make mistakes.”</p>
-      </article>
-      <article class="tcard reveal">
-        <div class="ph"><span class="tag">[Teacher photo]</span><span class="glyph" aria-hidden="true">教</span></div>
-        <h3 class="name">[Teacher name]</h3>
-        <dl><dt>Focus</dt><dd>[Teaching focus, e.g. HSK Pathway]</dd><dt>Languages</dt><dd>[Languages]</dd></dl>
-        <p class="quote">[Personal quote from this teacher]</p>
-      </article>
-      <article class="tcard reveal">
-        <div class="ph"><span class="frame"></span><span class="tag">[Teacher photo]</span><span class="glyph" aria-hidden="true">学</span></div>
-        <h3 class="name">[Teacher name]</h3>
-        <dl><dt>Focus</dt><dd>[Teaching focus, e.g. Business Chinese]</dd><dt>Languages</dt><dd>[Languages]</dd></dl>
-        <p class="quote">[Personal quote from this teacher]</p>
-      </article>
+  <div class="wrap team">
+    <figure class="ph shot team-photo reveal" data-photo="teachers" role="img" aria-label="Teachers and children on Teachers’ Day"><span class="cap">Teachers and children on Teachers’ Day</span></figure>
+    <div class="team-copy reveal">
+      <p class="eyebrow"><span class="sc">老师</span> Our teachers</p>
+      <h2 class="h2">The people behind the learning</h2>
+      <p class="lede">SunMoon’s team brings together native Mandarin speakers and Vietnamese teachers trained in Chinese language, many of whom studied in China or worked as interpreters. What we value more than certificates is how a teacher is with a child: patient, warm, and able to turn a lesson into play.</p>
+      <div class="focus"><span>Native &amp; Vietnamese teachers</span><span>Studied in China</span><span>Interpreting experience</span><span>Max 6 children per class</span></div>
+      <p class="team-quote">“Children learn best when they feel safe enough to make mistakes.”</p>
     </div>
   </div>
 </section>
@@ -1978,7 +1932,7 @@ body.has-float{padding-bottom:0}
       <details><summary>Do you offer HSK preparation?<span class="ic"></span></summary><div class="ans"><p>Yes. Our HSK Pathway runs from Foundation to HSK 6.</p></div></details>
       <details><summary>Can adults learn Chinese?<span class="ic"></span></summary><div class="ans"><p>Yes. Adult programmes are personalised according to each learner's goals.</p></div></details>
       <details><summary>Do you offer Business Chinese?<span class="ic"></span></summary><div class="ans"><p>Yes.</p></div></details>
-      <details><summary>How many students are in one class?<span class="ic"></span></summary><div class="ans"><p><span class="tbd">[Class size]</span></p><p>Add the actual class size for Little, Kids and HSK groups here.</p></div></details>
+      <details><summary>How many students are in one class?<span class="ic"></span></summary><div class="ans"><p>At most 6 children per class, so every child gets the teacher’s attention.</p></div></details>
       <details><summary>Where are classes held?<span class="ic"></span></summary><div class="ans"><p>Park 01 &amp; Landmark 6, Vinhomes Central Park, 208 Nguyen Huu Canh, Binh Thanh District, Ho Chi Minh City.</p><p><span class="tbd">[Online classes?]</span></p></div></details>
       <details><summary>How can I book a trial?<span class="ic"></span></summary><div class="ans"><p>Fill in the short form below, or message us on Zalo. We'll reply to arrange a time.</p><p><a class="link" href="#trial">Book a trial <svg viewBox="0 0 16 16" fill="none" stroke="currentColor" stroke-width="1.5"><path d="M2 8h11M9 4l4 4-4 4"/></svg></a></p></div></details>
     </div>
@@ -2013,7 +1967,6 @@ body.has-float{padding-bottom:0}
         <div><dt>WhatsApp / Zalo</dt><dd><a href="https://zalo.me/0396308188" target="_blank" rel="noopener">Zalo 039 630 8188</a></dd></div>
         <div><dt>Email</dt><dd><a href="mailto:sunmoonartandeducation@gmail.com">sunmoonartandeducation@gmail.com</a></dd></div>
         <div><dt>Address</dt><dd>Park 01 &amp; Landmark 6, Vinhomes Central Park, 208 Nguyen Huu Canh, Binh Thanh District, Ho Chi Minh City</dd></div>
-        <div><dt>Hours</dt><dd class="ph-text">[OPENING HOURS]</dd></div>
       </dl>
     </div>
     <form class="form reveal" id="trial" novalidate>
@@ -2043,7 +1996,7 @@ body.has-float{padding-bottom:0}
       </div>
       <div class="field"><label for="f-msg">Anything you'd like us to know?</label><textarea id="f-msg" name="message" placeholder="Goals, preferred days, questions…"></textarea></div>
       <div class="foot">
-        <p class="fine">We reply personally, usually within one working day. No fees are discussed before we understand the learner.</p>
+        <p class="fine">Press send and a ready-made message opens in SunMoon’s Zalo chat (039 630 8188). We reply personally, usually within one working day.</p>
         <button class="btn btn-primary" type="submit">Book a trial class</button>
       </div>
       <div class="done" role="status" aria-live="polite"></div>
@@ -2186,7 +2139,7 @@ body.has-float{padding-bottom:0}
         <div class="top"><span class="num">课程 01</span><span class="age">3–5 岁</span></div>
         <h3 class="name"><small>Little SunMoon</small>日月幼儿班</h3>
         <p class="tagline"><span>第一个词。</span><span>第一次对话。</span><span>第一次爱上中文。</span></p>
-        <p class="vi">适合刚开始接触中文的幼儿。</p>
+        <p class="vi">适合刚开始接触中文的幼儿。 小班教学，每班最多 6 名孩子。</p>
         <div class="focus"><span>听</span><span>说</span><span>发音</span><span>词汇</span><span>讲故事</span><span>音乐与律动</span><span>创意活动</span></div>
         <p class="copy">在这个年龄，孩子不需要"更用功"。<strong>他们需要自然地体验语言。</strong>通过故事、儿歌、律动、游戏和创意活动，中文成为孩子喜欢的东西，而不是必须背下来的东西。</p>
         <a class="link" href="#trial">了解幼儿班 <svg viewBox="0 0 16 16" fill="none" stroke="currentColor" stroke-width="1.5"><path d="M2 8h11M9 4l4 4-4 4"/></svg></a>
@@ -2197,7 +2150,7 @@ body.has-float{padding-bottom:0}
         <div class="top"><span class="num">课程 02</span><span class="age">5–13 岁</span></div>
         <h3 class="name"><small>SunMoon Kids</small>日月少儿班</h3>
         <p class="tagline"><span>打好基础。</span><span>找到自己的声音。</span></p>
-        <p class="vi">适合已有一定基础，或希望更系统学习中文的孩子。</p>
+        <p class="vi">适合已有一定基础，或希望更系统学习中文的孩子。 小班教学，每班最多 6 名孩子。</p>
         <div class="focus"><span>听</span><span>说</span><span>读</span><span>写</span><span>词汇</span><span>语法</span><span>沟通</span><span>中华文化</span></div>
         <p class="copy">孩子长大，他们与语言的关系也在变化。少儿班从游戏式交流逐步过渡到<strong>更扎实的语言基础</strong>，帮助孩子在听、说、读、写各方面更加自信。</p>
         <a class="link" href="#trial">了解少儿班 <svg viewBox="0 0 16 16" fill="none" stroke="currentColor" stroke-width="1.5"><path d="M2 8h11M9 4l4 4-4 4"/></svg></a>
@@ -2364,33 +2317,14 @@ body.has-float{padding-bottom:0}
 
 <!-- ============ TEACHERS ============ -->
 <section class="section teachers" id="teachers">
-  <div class="wrap">
-    <div class="head reveal">
-      <div>
-        <p class="eyebrow"><span class="sc">老师</span> 师资</p>
-        <h2 class="h2">学习背后的人</h2>
-      </div>
-      <a class="btn btn-ghost" href="#contact">认识我们的老师</a>
-    </div>
-    <div class="tgrid">
-      <article class="tcard reveal">
-        <div class="ph"><span class="frame"></span><span class="tag">[老师照片]</span><span class="glyph" aria-hidden="true">师</span></div>
-        <h3 class="name">[老师姓名]</h3>
-        <dl><dt>教学方向</dt><dd>[例如：幼儿班与少儿班]</dd><dt>语言</dt><dd>[语言]</dd></dl>
-        <p class="quote">"当孩子觉得犯错也很安全时，他们学得最好。"</p>
-      </article>
-      <article class="tcard reveal">
-        <div class="ph"><span class="tag">[老师照片]</span><span class="glyph" aria-hidden="true">教</span></div>
-        <h3 class="name">[老师姓名]</h3>
-        <dl><dt>教学方向</dt><dd>[例如：HSK 进阶之路]</dd><dt>语言</dt><dd>[语言]</dd></dl>
-        <p class="quote">[老师的一句话]</p>
-      </article>
-      <article class="tcard reveal">
-        <div class="ph"><span class="frame"></span><span class="tag">[老师照片]</span><span class="glyph" aria-hidden="true">学</span></div>
-        <h3 class="name">[老师姓名]</h3>
-        <dl><dt>教学方向</dt><dd>[例如：商务中文]</dd><dt>语言</dt><dd>[语言]</dd></dl>
-        <p class="quote">[老师的一句话]</p>
-      </article>
+  <div class="wrap team">
+    <figure class="ph shot team-photo reveal" data-photo="teachers" role="img" aria-label="教师节里的老师与孩子们"><span class="cap">教师节里的老师与孩子们</span></figure>
+    <div class="team-copy reveal">
+      <p class="eyebrow"><span class="sc">老师</span> 师资团队</p>
+      <h2 class="h2">学习背后的人</h2>
+      <p class="lede">日月的教师团队由中文母语老师和中文专业毕业的越南老师组成，其中不少老师曾在中国留学或从事口译工作。但比证书更重要的，是老师陪伴孩子的方式：耐心、温暖，并且懂得把课堂变成游戏。</p>
+      <div class="focus"><span>母语与越南籍老师</span><span>曾留学中国</span><span>口译经验</span><span>每班最多 6 名孩子</span></div>
+      <p class="team-quote">“当孩子觉得犯错也很安全时，他们学得最好。”</p>
     </div>
   </div>
 </section>
@@ -2466,7 +2400,7 @@ body.has-float{padding-bottom:0}
       <details><summary>有 HSK 备考课程吗？<span class="ic"></span></summary><div class="ans"><p>有。我们的 HSK 进阶之路从基础一直到 HSK 6。</p></div></details>
       <details><summary>成人可以学吗？<span class="ic"></span></summary><div class="ans"><p>可以。成人课程按每位学员的目标量身定制。</p></div></details>
       <details><summary>有商务中文吗？<span class="ic"></span></summary><div class="ans"><p>有。</p></div></details>
-      <details><summary>一个班有多少学员？<span class="ic"></span></summary><div class="ans"><p><span class="tbd">[班级人数]</span></p><p>请在此填写幼儿班、少儿班和 HSK 班的真实人数。</p></div></details>
+      <details><summary>一个班有多少学员？<span class="ic"></span></summary><div class="ans"><p>每班最多 6 名孩子，让老师能照顾到每一个孩子。</p></div></details>
       <details><summary>上课地点在哪里？<span class="ic"></span></summary><div class="ans"><p>胡志明市平盛郡阮友景路 208 号 Vinhomes Central Park，Park 01 与 Landmark 6。</p><p><span class="tbd">[是否提供线上课程？]</span></p></div></details>
       <details><summary>如何预约试听？<span class="ic"></span></summary><div class="ans"><p>填写下方的简短表格，或通过 Zalo 联系我们。我们会回复并安排时间。</p><p><a class="link" href="#trial">预约试听 <svg viewBox="0 0 16 16" fill="none" stroke="currentColor" stroke-width="1.5"><path d="M2 8h11M9 4l4 4-4 4"/></svg></a></p></div></details>
     </div>
@@ -2501,7 +2435,6 @@ body.has-float{padding-bottom:0}
         <div><dt>Zalo / WhatsApp</dt><dd><a href="https://zalo.me/0396308188" target="_blank" rel="noopener">Zalo 039 630 8188</a></dd></div>
         <div><dt>邮箱</dt><dd><a href="mailto:sunmoonartandeducation@gmail.com">sunmoonartandeducation@gmail.com</a></dd></div>
         <div><dt>地址</dt><dd>Park 01 &amp; Landmark 6, Vinhomes Central Park, 208 Nguyen Huu Canh, Binh Thanh, Ho Chi Minh City（胡志明市平盛郡）</dd></div>
-        <div><dt>开放时间</dt><dd class="ph-text">[开放时间]</dd></div>
       </dl>
     </div>
     <form class="form reveal" id="trial" novalidate>
@@ -2531,7 +2464,7 @@ body.has-float{padding-bottom:0}
       </div>
       <div class="field"><label for="f-msg">还有什么想让我们知道的？</label><textarea id="f-msg" name="message" placeholder="目标、方便的时间、问题……"></textarea></div>
       <div class="foot">
-        <p class="fine">我们会亲自回复，通常在一个工作日内。在了解学员之前，我们不会先谈学费。</p>
+        <p class="fine">点击发送后，信息会自动生成并打开日月的 Zalo 聊天（039 630 8188）。我们会亲自回复，通常在一个工作日内。</p>
         <button class="btn btn-primary" type="submit">预约试听课</button>
       </div>
       <div class="done" role="status" aria-live="polite"></div>
@@ -2596,19 +2529,17 @@ body.has-float{padding-bottom:0}
   var d=document, w=window;
   var reduce = w.matchMedia && w.matchMedia('(prefers-reduced-motion: reduce)').matches;
   var LANGS={vi:'Tiếng Việt',en:'English',zh:'中文'};
+  var ZALO='https://zalo.me/0396308188';
   var MSG={
-    en:{sending:'Sending…',btn:'Book a trial class',
-        ok:function(x){return '<b>Thank you, '+x.parent+'.</b>We have your request for a trial ('+x.group+'). We will contact you on '+x.phone+' to arrange a time.';},
-        no:function(x){return '<b>Almost there.</b>Our online form is not connected yet. Please send this to us on Zalo or by phone so we can arrange the trial: <br><br><em>'+x.parent+' · '+x.phone+' · '+x.group+(x.age?' · age '+x.age:'')+'</em>';},
-        open:'Open menu',close:'Close menu'},
-    vi:{sending:'Đang gửi…',btn:'Đăng ký học thử',
-        ok:function(x){return '<b>Cảm ơn '+x.parent+'.</b>SunMoon đã nhận yêu cầu học thử ('+x.group+'). Chúng tôi sẽ liên hệ số '+x.phone+' để hẹn giờ.';},
-        no:function(x){return '<b>Gần xong rồi.</b>Form online chưa được kết nối. Bạn gửi giúp thông tin này qua Zalo hoặc điện thoại để SunMoon hẹn buổi học thử: <br><br><em>'+x.parent+' · '+x.phone+' · '+x.group+(x.age?' · '+x.age+' tuổi':'')+'</em>';},
-        open:'Mở menu',close:'Đóng menu'},
-    zh:{sending:'发送中…',btn:'预约试听课',
-        ok:function(x){return '<b>谢谢您，'+x.parent+'。</b>我们已收到您的试听申请（'+x.group+'）。我们会通过 '+x.phone+' 联系您安排时间。';},
-        no:function(x){return '<b>就快好了。</b>在线表格尚未连接。请通过 Zalo 或电话把以下信息发给我们，以便安排试听：<br><br><em>'+x.parent+' · '+x.phone+' · '+x.group+(x.age?' · '+x.age+' 岁':'')+'</em>';},
-        open:'打开菜单',close:'关闭菜单'}
+    en:{open:'Open menu',close:'Close menu',title:'Your message is ready',copied:'Copied. Paste it into the Zalo chat.',copy:'Copy message',go:'Open Zalo and send',
+        hint:'Zalo will open a chat with SunMoon (039 630 8188). Paste the message and send it, we reply personally.',
+        compose:function(x){return 'Hello SunMoon, I would like to book a trial class.\n- Parent: '+x.parent+'\n- Phone/Zalo: '+x.phone+'\n- Class: '+x.group+(x.age?'\n- Age: '+x.age:'')+'\n- Chinese experience: '+x.experience+(x.message?'\n- Note: '+x.message:'');}},
+    vi:{open:'Mở menu',close:'Đóng menu',title:'Tin nhắn đã soạn sẵn',copied:'Đã sao chép. Dán vào khung chat Zalo là xong.',copy:'Sao chép tin nhắn',go:'Mở Zalo và gửi',
+        hint:'Zalo sẽ mở khung chat với SunMoon (039 630 8188). Dán tin nhắn và gửi, SunMoon sẽ trả lời trực tiếp.',
+        compose:function(x){return 'Xin chào SunMoon, tôi muốn đăng ký học thử.\n- Phụ huynh: '+x.parent+'\n- SĐT/Zalo: '+x.phone+'\n- Lớp: '+x.group+(x.age?'\n- Tuổi: '+x.age:'')+'\n- Đã học tiếng Trung: '+x.experience+(x.message?'\n- Ghi chú: '+x.message:'');}},
+    zh:{open:'打开菜单',close:'关闭菜单',title:'信息已为您准备好',copied:'已复制。粘贴到 Zalo 聊天框即可。',copy:'复制信息',go:'打开 Zalo 发送',
+        hint:'Zalo 将打开与日月（039 630 8188）的聊天窗口。粘贴信息并发送，我们会亲自回复。',
+        compose:function(x){return '您好日月，我想预约试听课。\n- 家长：'+x.parent+'\n- 电话/Zalo：'+x.phone+'\n- 班级：'+x.group+(x.age?'\n- 年龄：'+x.age:'')+'\n- 中文基础：'+x.experience+(x.message?'\n- 备注：'+x.message:'');}}
   };
   var lang='vi';
   function esc(s){ return String(s).replace(/[&<>"']/g,function(c){ return {'&':'&amp;','<':'&lt;','>':'&gt;','"':'&quot;',"'":'&#39;'}[c]; }); }
@@ -2730,20 +2661,19 @@ body.has-float{padding-bottom:0}
         f.classList.toggle('invalid', bad); if(bad) ok=false;
       });
       if(!ok){ form.querySelector('.invalid input').focus(); return; }
-      var data={}; new FormData(form).forEach(function(v,k){ data[k]=v; });
-      data.submitted_at=new Date().toISOString(); data.lang=lang;
-      var safe={}; for(var k in data) safe[k]=esc(data[k]);
-      var done=form.querySelector('.done'), btn=form.querySelector('button[type=submit]');
-      function finish(sent){
-        form.classList.add('sent');
-        done.innerHTML = sent ? MSG[lang].ok(safe) : MSG[lang].no(safe);
-        done.scrollIntoView({behavior: reduce?'auto':'smooth', block:'center'});
-      }
-      if(!FORM_ENDPOINT){ finish(false); return; }
-      btn.disabled=true; btn.textContent=MSG[lang].sending;
-      fetch(FORM_ENDPOINT,{method:'POST',mode:'no-cors',headers:{'Content-Type':'text/plain'},body:JSON.stringify(data)})
-        .then(function(){ finish(true); }).catch(function(){ finish(false); })
-        .finally(function(){ btn.disabled=false; btn.textContent=MSG[lang].btn; });
+      var data={}; new FormData(form).forEach(function(v,k){ data[k]=(v||'').trim(); });
+      var text=MSG[lang].compose(data);
+      var done=form.querySelector('.done');
+      form.classList.add('sent');
+      done.innerHTML='<b>'+MSG[lang].title+'</b><pre class="msg">'+esc(text)+'</pre><p class="hint-line">'+MSG[lang].hint+'</p>'
+        +'<div class="done-actions"><a class="btn btn-primary" target="_blank" rel="noopener" href="'+ZALO+'">'+MSG[lang].go+'</a><button type="button" class="btn btn-ghost copy">'+MSG[lang].copy+'</button></div><p class="copied" aria-live="polite"></p>';
+      var flag=done.querySelector('.copied');
+      function copy(){ try{ navigator.clipboard.writeText(text).then(function(){ flag.textContent=MSG[lang].copied; }); }catch(e){} }
+      done.querySelector('.copy').addEventListener('click', copy);
+      copy();
+      done.scrollIntoView({behavior: reduce?'auto':'smooth', block:'center'});
+      if(FORM_ENDPOINT){ data.submitted_at=new Date().toISOString(); data.lang=lang;
+        fetch(FORM_ENDPOINT,{method:'POST',mode:'no-cors',headers:{'Content-Type':'text/plain'},body:JSON.stringify(data)}).catch(function(){}); }
     });
     form.querySelectorAll('input').forEach(function(i){ i.addEventListener('input', function(){ i.closest('.field').classList.remove('invalid'); }); });
 
