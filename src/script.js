@@ -39,6 +39,7 @@
     d.documentElement.lang = code==='zh'?'zh-Hans':code;
     d.documentElement.setAttribute('data-lang',code);
     try{ localStorage.setItem('sunmoon-lang',code); }catch(e){}
+    if(w.PAGE_TITLES && w.PAGE_TITLES[code]) d.title=w.PAGE_TITLES[code];
     d.querySelectorAll('.langs button').forEach(function(b){ b.setAttribute('aria-pressed', b.dataset.lang===code?'true':'false'); });
     init();
   }
@@ -52,21 +53,23 @@
   var scrollBound=false;
   function init(){
     var header=d.querySelector('.header');
-    function onScroll(){ header.classList.toggle('scrolled', w.scrollY>8); }
-    onScroll();
+    if(header) header.classList.toggle('scrolled', w.scrollY>8);
     if(!scrollBound){ w.addEventListener('scroll', function(){ var h=d.querySelector('.header'); if(h) h.classList.toggle('scrolled', w.scrollY>8); }, {passive:true}); scrollBound=true; }
 
     /* mobile drawer */
     var burger=d.querySelector('.burger'), drawer=d.getElementById('drawer');
     function setMenu(open){
+      if(!burger||!drawer) return;
       burger.setAttribute('aria-expanded', open?'true':'false');
       burger.setAttribute('aria-label', open?MSG[lang].close:MSG[lang].open);
       drawer.classList.toggle('open', open);
       d.body.style.overflow = open?'hidden':'';
     }
-    burger.addEventListener('click', function(){ setMenu(burger.getAttribute('aria-expanded')!=='true'); });
-    drawer.querySelectorAll('a').forEach(function(a){ a.addEventListener('click', function(){ setMenu(false); }); });
-    d.addEventListener('keydown', function(e){ if(e.key==='Escape' && drawer.classList.contains('open')) setMenu(false); });
+    if(burger&&drawer){
+      burger.addEventListener('click', function(){ setMenu(burger.getAttribute('aria-expanded')!=='true'); });
+      drawer.querySelectorAll('a').forEach(function(a){ a.addEventListener('click', function(){ setMenu(false); }); });
+      d.addEventListener('keydown', function(e){ if(e.key==='Escape' && drawer.classList.contains('open')) setMenu(false); });
+    }
 
     /* reveal on scroll — elements already in view are never hidden */
     var reveals=[].slice.call(d.querySelectorAll('.reveal'));
@@ -99,13 +102,17 @@
       tio.observe(tl);
     }
 
-    /* floating CTA: show after hero, hide while the form is visible */
-    var fc=d.getElementById('floatCta'), hero=d.querySelector('.hero'), form=d.getElementById('trial');
-    var heroGone=false, formVisible=false;
-    function updateFloat(){ fc.classList.toggle('show', heroGone && !formVisible); }
-    if('IntersectionObserver' in w){
-      new IntersectionObserver(function(e){ heroGone=!e[0].isIntersecting; updateFloat(); },{threshold:0.15}).observe(hero);
-      new IntersectionObserver(function(e){ formVisible=e[0].isIntersecting; updateFloat(); },{threshold:0.1}).observe(form);
+    /* floating CTA: show after the first screen, hide while the form is visible */
+    var fc=d.getElementById('floatCta'), hero=d.querySelector('.hero, .pagehead'), form=d.getElementById('trial');
+    if(fc){
+      var heroGone=false, formVisible=false;
+      function updateFloat(){ fc.classList.toggle('show', heroGone && !formVisible); }
+      if('IntersectionObserver' in w && hero){
+        new IntersectionObserver(function(e){ heroGone=!e[0].isIntersecting; updateFloat(); },{threshold:0.15}).observe(hero);
+      } else { heroGone=true; updateFloat(); }
+      if('IntersectionObserver' in w && form){
+        new IntersectionObserver(function(e){ formVisible=e[0].isIntersecting; updateFloat(); },{threshold:0.1}).observe(form);
+      }
     }
 
     /* accordion: close others when one opens */
@@ -129,6 +136,7 @@
     }
 
     /* trial form */
+    if(form){
     form.addEventListener('submit', function(e){
       e.preventDefault();
       var ok=true;
@@ -153,8 +161,9 @@
         fetch(FORM_ENDPOINT,{method:'POST',mode:'no-cors',headers:{'Content-Type':'text/plain'},body:JSON.stringify(data)}).catch(function(){}); }
     });
     form.querySelectorAll('input').forEach(function(i){ i.addEventListener('input', function(){ i.closest('.field').classList.remove('invalid'); }); });
+    }
 
-    d.getElementById('year').textContent=new Date().getFullYear();
+    var yr=d.getElementById('year'); if(yr) yr.textContent=new Date().getFullYear();
     bindSwitch();
   }
 
