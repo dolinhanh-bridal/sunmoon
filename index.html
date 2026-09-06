@@ -314,6 +314,25 @@ p{margin:0}
 .prog.hsk:hover .pathway .step:last-child i{background:var(--vermilion);border-color:var(--vermilion)}
 .prog.hsk .pathway .step i{transition-delay:calc(var(--i) * 60ms)}
 
+/* ---------- extra classes ---------- */
+.extra{margin-top:3.5rem;padding-top:3rem;border-top:1px solid var(--line)}
+.extra .head{display:grid;gap:1rem;margin-bottom:2rem}
+@media (min-width:900px){.extra .head{grid-template-columns:1fr 1fr;align-items:end}}
+.extra .h3{margin-top:.8rem;font-size:clamp(1.8rem,3.2vw,2.6rem)}
+.extra-grid{display:grid;gap:1.25rem}
+@media (min-width:760px){.extra-grid{grid-template-columns:repeat(3,1fr)}}
+.xprog{position:relative;overflow:hidden;min-width:0;background:var(--ivory-2);border:1px solid transparent;border-radius:var(--radius);padding:1.8rem;display:flex;flex-direction:column;gap:1rem;transition:transform .35s ease,box-shadow .35s ease,border-color .35s ease}
+.xprog:hover{transform:translateY(-6px);box-shadow:var(--shadow);border-color:var(--line)}
+.xprog .glyph{position:absolute;right:-.1em;top:-.35em;font-family:var(--sc);font-size:7rem;line-height:1;color:var(--ink);opacity:.045;pointer-events:none}
+.xprog .top{display:flex;justify-content:flex-start}
+.xprog .age{font-size:.7rem;letter-spacing:.18em;text-transform:uppercase;font-weight:600;padding:.45rem .7rem;border-radius:999px;border:1px solid var(--line-strong)}
+.xprog .name{font-size:clamp(1.5rem,2.2vw,1.9rem);line-height:1.05}
+.xprog .tagline{font-family:var(--serif);font-style:italic;font-weight:300;font-size:1.15rem;color:var(--ink)}
+.xprog .focus{display:flex;flex-wrap:wrap;gap:.4rem}
+.xprog .focus span{font-size:.68rem;letter-spacing:.1em;text-transform:uppercase;padding:.35rem .55rem;border-radius:3px;background:var(--ivory);color:var(--ink-2);border:1px solid var(--line)}
+.xprog .copy{color:var(--ink-2);font-size:.98rem;line-height:1.6}
+.xprog .copy strong{color:var(--ink);font-weight:500}
+.xprog .link{margin-top:auto;align-self:flex-start}
 /* ---------- why ---------- */
 .why .grid{display:grid;gap:0;border-top:1px solid var(--line);border-left:1px solid var(--line);margin-top:3rem}
 @media (min-width:700px){.why .grid{grid-template-columns:1fr 1fr}}
@@ -778,6 +797,45 @@ body.has-float{padding-bottom:0}
         <a class="link" href="#trial">Trao đổi với giáo viên <svg viewBox="0 0 16 16" fill="none" stroke="currentColor" stroke-width="1.5"><path d="M2 8h11M9 4l4 4-4 4"/></svg></a>
       </article>
     </div>
+
+    <div class="extra reveal" id="more">
+      <div class="head">
+        <div>
+          <p class="eyebrow"><span class="sc">其他</span> Ngoài tiếng Trung</p>
+          <h3 class="h3">Các lớp khác tại SunMoon</h3>
+        </div>
+        <p class="lede">Cùng một cách dạy: đúng tuổi, lớp nhỏ tối đa 6 bé, học qua chơi và tương tác thật.</p>
+      </div>
+      <div class="extra-grid">
+      <article class="xprog reveal">
+        <span class="glyph" aria-hidden="true">数</span>
+        <div class="top"><span class="age">3–6 tuổi</span></div>
+        <h3 class="name">Toán tư duy</h3>
+        <p class="tagline">Nghĩ trước khi đếm.</p>
+        <div class="focus"><span>Số & lượng</span><span>Hình khối</span><span>Quy luật</span><span>Logic</span><span>Trò chơi tư duy</span></div>
+        <p class="copy">Không phải học thuộc bảng cộng. Con làm quen với số, hình và quy luật qua đồ vật thật và trò chơi, để <strong>hình thành cách suy nghĩ có logic</strong> từ sớm.</p>
+        <a class="link" href="#trial">Đăng ký học thử <svg viewBox="0 0 16 16" fill="none" stroke="currentColor" stroke-width="1.5"><path d="M2 8h11M9 4l4 4-4 4"/></svg></a>
+      </article>
+      <article class="xprog reveal">
+        <span class="glyph" aria-hidden="true">学</span>
+        <div class="top"><span class="age">5–6 tuổi</span></div>
+        <h3 class="name">Tiền tiểu học</h3>
+        <p class="tagline">Sẵn sàng vào lớp 1.</p>
+        <div class="focus"><span>Làm quen chữ & số</span><span>Tập trung</span><span>Tự lập</span><span>Kỹ năng lớp học</span></div>
+        <p class="copy">Chuẩn bị cho con bước vào lớp 1 một cách tự tin: biết ngồi học, biết lắng nghe, quen với chữ và số, và <strong>có thói quen tự làm việc của mình</strong>.</p>
+        <a class="link" href="#trial">Đăng ký học thử <svg viewBox="0 0 16 16" fill="none" stroke="currentColor" stroke-width="1.5"><path d="M2 8h11M9 4l4 4-4 4"/></svg></a>
+      </article>
+      <article class="xprog reveal">
+        <span class="glyph" aria-hidden="true">书</span>
+        <div class="top"><span class="age">5–7 tuổi</span></div>
+        <h3 class="name">Luyện chữ đẹp</h3>
+        <p class="tagline">Nét chữ, nết người.</p>
+        <div class="focus"><span>Cầm bút đúng</span><span>Tư thế ngồi</span><span>Nét cơ bản</span><span>Chữ đều & sạch</span></div>
+        <p class="copy">Từ cách cầm bút, tư thế ngồi đến từng nét cơ bản. Con viết đẹp hơn mỗi tuần, và quan trọng hơn là <strong>kiên nhẫn hơn</strong>.</p>
+        <a class="link" href="#trial">Đăng ký học thử <svg viewBox="0 0 16 16" fill="none" stroke="currentColor" stroke-width="1.5"><path d="M2 8h11M9 4l4 4-4 4"/></svg></a>
+      </article>
+      </div>
+    </div>
   </div>
 </section>
 
@@ -1042,6 +1100,7 @@ body.has-float{padding-bottom:0}
           <label><input type="radio" name="group" value="Kids (5–13 tuổi)"><span>Bé 5–13 tuổi</span></label>
           <label><input type="radio" name="group" value="Thiếu niên / HSK"><span>Thiếu niên · HSK</span></label>
           <label><input type="radio" name="group" value="Người lớn"><span>Người lớn · Cuộc sống &amp; công việc</span></label>
+          <label><input type="radio" name="group" value="Toán / Tiền tiểu học / Chữ đẹp"><span>Toán · Tiền tiểu học · Chữ đẹp</span></label>
         </div>
       </div>
       <div class="row two">
@@ -1246,6 +1305,45 @@ body.has-float{padding-bottom:0}
         <a class="link" href="#trial">Trao đổi với giáo viên <svg viewBox="0 0 16 16" fill="none" stroke="currentColor" stroke-width="1.5"><path d="M2 8h11M9 4l4 4-4 4"/></svg></a>
       </article>
     </div>
+
+    <div class="extra reveal" id="more">
+      <div class="head">
+        <div>
+          <p class="eyebrow"><span class="sc">其他</span> Ngoài tiếng Trung</p>
+          <h3 class="h3">Các lớp khác tại SunMoon</h3>
+        </div>
+        <p class="lede">Cùng một cách dạy: đúng tuổi, lớp nhỏ tối đa 6 bé, học qua chơi và tương tác thật.</p>
+      </div>
+      <div class="extra-grid">
+      <article class="xprog reveal">
+        <span class="glyph" aria-hidden="true">数</span>
+        <div class="top"><span class="age">3–6 tuổi</span></div>
+        <h3 class="name">Toán tư duy</h3>
+        <p class="tagline">Nghĩ trước khi đếm.</p>
+        <div class="focus"><span>Số & lượng</span><span>Hình khối</span><span>Quy luật</span><span>Logic</span><span>Trò chơi tư duy</span></div>
+        <p class="copy">Không phải học thuộc bảng cộng. Con làm quen với số, hình và quy luật qua đồ vật thật và trò chơi, để <strong>hình thành cách suy nghĩ có logic</strong> từ sớm.</p>
+        <a class="link" href="#trial">Đăng ký học thử <svg viewBox="0 0 16 16" fill="none" stroke="currentColor" stroke-width="1.5"><path d="M2 8h11M9 4l4 4-4 4"/></svg></a>
+      </article>
+      <article class="xprog reveal">
+        <span class="glyph" aria-hidden="true">学</span>
+        <div class="top"><span class="age">5–6 tuổi</span></div>
+        <h3 class="name">Tiền tiểu học</h3>
+        <p class="tagline">Sẵn sàng vào lớp 1.</p>
+        <div class="focus"><span>Làm quen chữ & số</span><span>Tập trung</span><span>Tự lập</span><span>Kỹ năng lớp học</span></div>
+        <p class="copy">Chuẩn bị cho con bước vào lớp 1 một cách tự tin: biết ngồi học, biết lắng nghe, quen với chữ và số, và <strong>có thói quen tự làm việc của mình</strong>.</p>
+        <a class="link" href="#trial">Đăng ký học thử <svg viewBox="0 0 16 16" fill="none" stroke="currentColor" stroke-width="1.5"><path d="M2 8h11M9 4l4 4-4 4"/></svg></a>
+      </article>
+      <article class="xprog reveal">
+        <span class="glyph" aria-hidden="true">书</span>
+        <div class="top"><span class="age">5–7 tuổi</span></div>
+        <h3 class="name">Luyện chữ đẹp</h3>
+        <p class="tagline">Nét chữ, nết người.</p>
+        <div class="focus"><span>Cầm bút đúng</span><span>Tư thế ngồi</span><span>Nét cơ bản</span><span>Chữ đều & sạch</span></div>
+        <p class="copy">Từ cách cầm bút, tư thế ngồi đến từng nét cơ bản. Con viết đẹp hơn mỗi tuần, và quan trọng hơn là <strong>kiên nhẫn hơn</strong>.</p>
+        <a class="link" href="#trial">Đăng ký học thử <svg viewBox="0 0 16 16" fill="none" stroke="currentColor" stroke-width="1.5"><path d="M2 8h11M9 4l4 4-4 4"/></svg></a>
+      </article>
+      </div>
+    </div>
   </div>
 </section>
 
@@ -1510,6 +1608,7 @@ body.has-float{padding-bottom:0}
           <label><input type="radio" name="group" value="Kids (5–13 tuổi)"><span>Bé 5–13 tuổi</span></label>
           <label><input type="radio" name="group" value="Thiếu niên / HSK"><span>Thiếu niên · HSK</span></label>
           <label><input type="radio" name="group" value="Người lớn"><span>Người lớn · Cuộc sống &amp; công việc</span></label>
+          <label><input type="radio" name="group" value="Toán / Tiền tiểu học / Chữ đẹp"><span>Toán · Tiền tiểu học · Chữ đẹp</span></label>
         </div>
       </div>
       <div class="row two">
@@ -1717,6 +1816,45 @@ body.has-float{padding-bottom:0}
         <p class="copy">You don't always need a full curriculum. Sometimes, you simply need <strong>the right Chinese for what you do every day.</strong> Our personalised lessons are built around your actual goals, vocabulary and situations.</p>
         <a class="link" href="#trial">Talk to a teacher <svg viewBox="0 0 16 16" fill="none" stroke="currentColor" stroke-width="1.5"><path d="M2 8h11M9 4l4 4-4 4"/></svg></a>
       </article>
+    </div>
+
+    <div class="extra reveal" id="more">
+      <div class="head">
+        <div>
+          <p class="eyebrow"><span class="sc">其他</span> Beyond Chinese</p>
+          <h3 class="h3">More classes at SunMoon</h3>
+        </div>
+        <p class="lede">The same way of teaching: age-appropriate, small classes of at most 6, learning through play and real interaction.</p>
+      </div>
+      <div class="extra-grid">
+      <article class="xprog reveal">
+        <span class="glyph" aria-hidden="true">数</span>
+        <div class="top"><span class="age">Ages 3–6</span></div>
+        <h3 class="name">Logical Maths</h3>
+        <p class="tagline">Think before you count.</p>
+        <div class="focus"><span>Numbers & quantity</span><span>Shapes</span><span>Patterns</span><span>Logic</span><span>Thinking games</span></div>
+        <p class="copy">Not memorising sums. Children meet numbers, shapes and patterns through real objects and games, and <strong>build logical thinking</strong> early.</p>
+        <a class="link" href="#trial">Book a trial <svg viewBox="0 0 16 16" fill="none" stroke="currentColor" stroke-width="1.5"><path d="M2 8h11M9 4l4 4-4 4"/></svg></a>
+      </article>
+      <article class="xprog reveal">
+        <span class="glyph" aria-hidden="true">学</span>
+        <div class="top"><span class="age">Ages 5–6</span></div>
+        <h3 class="name">Pre-Primary</h3>
+        <p class="tagline">Ready for Grade 1.</p>
+        <div class="focus"><span>First letters & numbers</span><span>Focus</span><span>Independence</span><span>Classroom skills</span></div>
+        <p class="copy">Preparing children to start school with confidence: sitting to learn, listening, getting used to letters and numbers, and <strong>doing things for themselves</strong>.</p>
+        <a class="link" href="#trial">Book a trial <svg viewBox="0 0 16 16" fill="none" stroke="currentColor" stroke-width="1.5"><path d="M2 8h11M9 4l4 4-4 4"/></svg></a>
+      </article>
+      <article class="xprog reveal">
+        <span class="glyph" aria-hidden="true">书</span>
+        <div class="top"><span class="age">Ages 5–7</span></div>
+        <h3 class="name">Beautiful Handwriting</h3>
+        <p class="tagline">Neat hand, calm mind.</p>
+        <div class="focus"><span>Pencil grip</span><span>Posture</span><span>Basic strokes</span><span>Even & clean writing</span></div>
+        <p class="copy">From how to hold a pencil and sit, to every basic stroke. Handwriting improves week by week, and so does <strong>patience</strong>.</p>
+        <a class="link" href="#trial">Book a trial <svg viewBox="0 0 16 16" fill="none" stroke="currentColor" stroke-width="1.5"><path d="M2 8h11M9 4l4 4-4 4"/></svg></a>
+      </article>
+      </div>
     </div>
   </div>
 </section>
@@ -1982,6 +2120,7 @@ body.has-float{padding-bottom:0}
           <label><input type="radio" name="group" value="Kids (5–13)"><span>Child, 5–13</span></label>
           <label><input type="radio" name="group" value="Teen / HSK"><span>Teen · HSK</span></label>
           <label><input type="radio" name="group" value="Adult"><span>Adult · Life &amp; Work</span></label>
+          <label><input type="radio" name="group" value="Maths / Pre-Primary / Handwriting"><span>Maths · Pre-Primary · Handwriting</span></label>
         </div>
       </div>
       <div class="row two">
@@ -2185,6 +2324,45 @@ body.has-float{padding-bottom:0}
         <p class="copy">你并不总是需要一整套教材。有时你只需要<strong>正好用于每天工作的那部分中文。</strong>我们的定制课程围绕你真实的目标、词汇和场景来设计。</p>
         <a class="link" href="#trial">与老师聊聊 <svg viewBox="0 0 16 16" fill="none" stroke="currentColor" stroke-width="1.5"><path d="M2 8h11M9 4l4 4-4 4"/></svg></a>
       </article>
+    </div>
+
+    <div class="extra reveal" id="more">
+      <div class="head">
+        <div>
+          <p class="eyebrow"><span class="sc">其他</span> 中文之外</p>
+          <h3 class="h3">日月的其他课程</h3>
+        </div>
+        <p class="lede">同样的教学方式：因龄施教、每班最多 6 名孩子、在游戏与真实互动中学习。</p>
+      </div>
+      <div class="extra-grid">
+      <article class="xprog reveal">
+        <span class="glyph" aria-hidden="true">数</span>
+        <div class="top"><span class="age">3–6 岁</span></div>
+        <h3 class="name">逻辑思维数学</h3>
+        <p class="tagline">先思考，再数数。</p>
+        <div class="focus"><span>数与量</span><span>图形</span><span>规律</span><span>逻辑</span><span>思维游戏</span></div>
+        <p class="copy">不是背加法表。孩子通过真实物品和游戏认识数字、图形和规律，<strong>从小建立逻辑思维</strong>。</p>
+        <a class="link" href="#trial">预约试听 <svg viewBox="0 0 16 16" fill="none" stroke="currentColor" stroke-width="1.5"><path d="M2 8h11M9 4l4 4-4 4"/></svg></a>
+      </article>
+      <article class="xprog reveal">
+        <span class="glyph" aria-hidden="true">学</span>
+        <div class="top"><span class="age">5–6 岁</span></div>
+        <h3 class="name">幼小衔接</h3>
+        <p class="tagline">为一年级做好准备。</p>
+        <div class="focus"><span>认识字与数</span><span>专注力</span><span>独立性</span><span>课堂习惯</span></div>
+        <p class="copy">帮助孩子自信地走进小学：会坐下来学习、会倾听、熟悉文字与数字，并<strong>养成自己动手的习惯</strong>。</p>
+        <a class="link" href="#trial">预约试听 <svg viewBox="0 0 16 16" fill="none" stroke="currentColor" stroke-width="1.5"><path d="M2 8h11M9 4l4 4-4 4"/></svg></a>
+      </article>
+      <article class="xprog reveal">
+        <span class="glyph" aria-hidden="true">书</span>
+        <div class="top"><span class="age">5–7 岁</span></div>
+        <h3 class="name">书写练习</h3>
+        <p class="tagline">字如其人。</p>
+        <div class="focus"><span>正确握笔</span><span>坐姿</span><span>基本笔画</span><span>工整清晰</span></div>
+        <p class="copy">从握笔、坐姿到每一个基本笔画。孩子的字一周比一周好看，更重要的是<strong>更有耐心</strong>。</p>
+        <a class="link" href="#trial">预约试听 <svg viewBox="0 0 16 16" fill="none" stroke="currentColor" stroke-width="1.5"><path d="M2 8h11M9 4l4 4-4 4"/></svg></a>
+      </article>
+      </div>
     </div>
   </div>
 </section>
@@ -2450,6 +2628,7 @@ body.has-float{padding-bottom:0}
           <label><input type="radio" name="group" value="少儿班 (5–13岁)"><span>5–13 岁儿童</span></label>
           <label><input type="radio" name="group" value="青少年 / HSK"><span>青少年 · HSK</span></label>
           <label><input type="radio" name="group" value="成人"><span>成人 · 生活与职场</span></label>
+          <label><input type="radio" name="group" value="数学 / 幼小衔接 / 书写"><span>数学 · 幼小衔接 · 书写</span></label>
         </div>
       </div>
       <div class="row two">
